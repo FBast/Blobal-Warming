@@ -15,14 +15,13 @@ namespace Production.Scripts.Platforms {
         [Header("SO References")] 
         public FloatReference CurrentTimeReference; //Recupère depuis un SO le temps actuel
         public FloatReference EndTimeReference; //Recupère depuis un SO le temps actuel
+        public FloatReference LevelScrollingSpeed;
         public BoolReference IsScrolling;
 
         [Header("Parameters")]
-        public float SpeedBase;
         public float SpawnRateMultiplicator;
         public int PlateformMinNumber; //Minimum de plateformes qui peuvent spawn sur une ligne
         public int PlateformMaxNumber; //Maximum de plateformes qui peuvent spawn sur une ligne
-        public float ScrollingSpeed; //vitesse à laquelle il tombe, s'actualise dans Update
 
         [Header("Prefabs")]
         public List<GameObject> PatternPrefabs4PF4L;
@@ -61,14 +60,14 @@ namespace Production.Scripts.Platforms {
             if(!IsScrolling.Value) return;
             //Produit en croix : speed = (temps actuel * max speed possible / fin du temps * un multiplicateur de sécurité ) + strict minimum possible 
 
-            _spawnRate =  SpeedBase / ScrollingSpeed * SpawnRateMultiplicator;
+            _spawnRate =  SpawnRateMultiplicator / LevelScrollingSpeed.Value;
             //pareil mais avec le spawn rate
         
             _plateformNumberOffset = Mathf.RoundToInt((PlateformMaxNumber - PlateformMinNumber) / EndTimeReference.Value * (EndTimeReference.Value - _realTime) + PlateformMinNumber);
             
             //Scroll des plateformes
             foreach (GameObject platform in CurrentPlatforms) {
-                platform.transform.position -= transform.up * ScrollingSpeed;
+                platform.transform.position -= transform.up * LevelScrollingSpeed.Value;
             }
     
             //Instantiation des plateformes
@@ -81,7 +80,7 @@ namespace Production.Scripts.Platforms {
     
         private void InstantiatePlateform() {
 
-            _nbOfPlatformsToSpawn = Mathf.Clamp(Random.Range(-3, 3) + _plateformNumberOffset, PlateformMinNumber, PlateformMaxNumber);
+            _nbOfPlatformsToSpawn = Mathf.Clamp(Random.Range(-2, 3) + _plateformNumberOffset, PlateformMinNumber, PlateformMaxNumber);
             //détermine le nb de plateformes à faire spawn, clamp entre 1 et 4
             //tweeck les valeurs du random range pour augmenter ou diminuer la difficulté du jeu, + ou - de plateformes qui spawn a la fin
 
@@ -111,7 +110,7 @@ namespace Production.Scripts.Platforms {
 
                 _use4Lines = false;
             }
-            else 
+            else if(!_use4Lines)
             {
                 switch (_nbOfPlatformsToSpawn) {
            
