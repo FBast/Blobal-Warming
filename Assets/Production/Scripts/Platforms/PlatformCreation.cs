@@ -42,7 +42,6 @@ namespace Production.Scripts.Platforms {
         private float _timeSinceLastSpawn = 3;
         private float _spawnRate; // nb de secondes au bout du quel les plateformes sont instanciées
         private int _plateformNumberOffset;
-        private float _plateformDifficulty;
 
         private float _realTime => EndTimeReference.Value - CurrentTimeReference.Value;
 
