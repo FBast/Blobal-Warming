@@ -186,14 +186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02cfed30e9900f246b1a83160c637799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentPlatformsReference:
-    UseConstant: 0
-    ConstantValue: []
-    Variable: {fileID: 11400000, guid: c42471a3c6b59424eafbea5a6ad8cdb7, type: 2}
-  PlatformCreationGameObject:
-    UseConstant: 0
-    ConstantValue: {fileID: 0}
-    Variable: {fileID: 11400000, guid: c978332c17c2fca49aa2fecd6c715a6a, type: 2}
   CurrentPlatforms:
   - {fileID: 2058058060158963535}
   CurrentTimeReference:
@@ -204,15 +196,17 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 180
     Variable: {fileID: 11400000, guid: 2aadd9651b5705d478ecddbe43a02933, type: 2}
+  LevelScrollingSpeed:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 1848d9ce331ca8547babbf2ac8ea0e5f, type: 2}
   IsScrolling:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 7e5c9e4424280bf4c803ede1e88f632e, type: 2}
-  SpeedBase: 0.01
-  SpawnRateMultiplicator: 6
+  SpawnRateMultiplicator: 0.06
   PlateformMinNumber: 2
   PlateformMaxNumber: 4
-  ScrollingSpeed: 0.02
   PatternPrefabs4PF4L:
   - {fileID: 4501135261866549385, guid: dda435e87d0ab9c46b38757849f96b27, type: 3}
   PatternPrefabs3PF4L:

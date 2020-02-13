@@ -26,6 +26,7 @@ namespace Production.Scripts.Entities {
         public FloatReference MovementSpeedBaseValue;
         public FloatReference ControllerDirection;
         public BoolReference IsLevelScrolling;
+        public FloatReference LevelScrollingSpeed;
 
         [Header("Score Management")] 
         public IntEvent DisplayScore;
@@ -83,6 +84,7 @@ namespace Production.Scripts.Entities {
             Endtime.Value = StartingTime;
             SpawnActive.Value = true;
             HasGameStarted.Value = false;
+            LevelScrollingSpeed.Value = 0.02f;
             IsLevelScrolling.Value = false;
             foreach (var mS in MovementSpeed)
             {
