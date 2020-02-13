@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f0c0a0b7cba45c0a4b4887aa15056a2, type: 3}
-  m_Name: DisplayTutorial
+  m_Script: {fileID: 11500000, guid: e5bd9c66ac8e793429f922207d080b24, type: 3}
+  m_Name: ScorePanel
   m_EditorClassIdentifier: 
-  Description: 
+  Value: {fileID: 0}
