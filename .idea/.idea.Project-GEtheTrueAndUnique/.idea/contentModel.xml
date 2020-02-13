@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\frederic.bast\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\frederic.bast\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Project-GE.-1606610542.00" t="ExcludeRecursive" />
-    <e p="U:\UnityProjects\Project-GE" t="IncludeRecursive">
+    <e p="C:\Users\nathan.mansard\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\nathan.mansard\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Project-GEtheTrueAndUnique.-2078530849.00" t="ExcludeRecursive" />
+    <e p="C:\Users\nathan.mansard\Documents\ProjectsGitKraken\Project-GEtheTrueAndUnique" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -234,21 +234,18 @@
               <e p="SpawnPlatforms.cs" t="Include" />
             </e>
             <e p="UI" t="Include">
-              <e p="MenuEventsEntity.cs" t="Include" />
               <e p="ScoreMenuEntity.cs" t="Include" />
               <e p="UIEntity.cs" t="Include" />
             </e>
             <e p="Utils" t="Include">
               <e p="NameGenerator.cs" t="Include" />
-              <e p="ReferenceInitializer.cs" t="Include" />
             </e>
           </e>
         </e>
-        <e p="TrunkSlider.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
-      <e p="packages" t="ExcludeRecursive" />
-      <e p="Project-GE.sln" t="IncludeFlat" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Project-GEtheTrueAndUnique.sln" t="IncludeFlat" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
