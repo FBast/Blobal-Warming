@@ -10,7 +10,7 @@ Material:
   m_Name: Sphere Shield Shader Material
   m_Shader: {fileID: -6465566751694194690, guid: 134847fee522f9b468281b36bdc1462d,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

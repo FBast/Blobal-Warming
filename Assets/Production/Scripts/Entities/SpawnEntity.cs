@@ -17,12 +17,13 @@ namespace Production.Scripts.Entities
         void Awake()
         {
             player.GetComponent<PlayerEntity>().Name.Value = NameGenerator.GenerateName();
-        
+                
         }
         public void FirstSpawn()
         {
             if (SpawnActive.Value)
             {
+                player.SetActive(true);
                 PlayerSpawn.Raise();
                 OnPlayerActive.Value = true;
                 player.GetComponent<ArrowComponent>().DisplayOnRespawn();
@@ -44,6 +45,7 @@ namespace Production.Scripts.Entities
             else
             {
                 Debug.Log("Respawn Unactive");
+                player.SetActive(false);
             }
         }
 
