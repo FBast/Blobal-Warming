@@ -19,6 +19,10 @@ public class ArrowComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y > 8.5f)
+        {
+            Arrow.gameObject.SetActive(true);
+        }
         Vector2 newPos = transform.position;
         newPos.y = arrowY;
         Arrow.position = newPos;

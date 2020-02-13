@@ -977,7 +977,7 @@ MonoBehaviour:
   Timer:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: b891c568fa51d3c499740ddacf0c53eb, type: 2}
+    Variable: {fileID: 11400000, guid: 56364946be5fd804b86ba15fc8811756, type: 2}
   BonusPrefab: {fileID: 7734716728209363730, guid: 5887d0bf99d52bf4e9716f97eb030cc6,
     type: 3}
   PlayerInfos:
