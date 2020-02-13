@@ -65,6 +65,9 @@ TagManager:
   - name: Actor
     uniqueID: 2341731059
     locked: 0
+  - name: Wind
+    uniqueID: 1743409695
+    locked: 0
   - name: Water
     uniqueID: 1184116449
     locked: 0
