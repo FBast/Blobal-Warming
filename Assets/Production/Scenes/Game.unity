@@ -265,6 +265,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3395239860870396356, guid: 83e847c7025c2384ebc6f86d19c46aa4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4585107676136959633, guid: 83e847c7025c2384ebc6f86d19c46aa4,
         type: 3}
       propertyPath: m_RootOrder
