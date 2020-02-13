@@ -11,9 +11,9 @@ namespace Production.Scripts.Events {
     public class EventEntity : MonoBehaviour {
 
         [Header("SO Events")]
-        public List<EventCouple> RandomizedEvents = new List<EventCouple>();
-        public EventCouple OnStartGame;
-        public EventCouple OnEndGame;
+        public List<IntEvent> RandomizedEvents = new List<IntEvent>();
+        public IntEvent OnStartGame;
+        public IntEvent OnEndGame;
 
         [Header("SO References")] 
         public BoolReference HasGameStarted;
@@ -33,7 +33,7 @@ namespace Production.Scripts.Events {
         private float _eventTimer;
         private float _randTimer;
         private float _proba;
-        private EventCouple _currentEventCouple;
+        private IntEvent _currentEvent;
         private bool _isGameEnding;
         
         private void Start() {
@@ -43,7 +43,7 @@ namespace Production.Scripts.Events {
 
         private void Update() {
             if (CurrentTime.Value <= CooldownBeforeEnd && !_isGameEnding) {
-                OnEndGame.OnLaunchEvent.Raise(CooldownBeforeEnd);
+                OnEndGame.Raise(CooldownBeforeEnd);
                 _isGameEnding = true;
             }
             else {
@@ -54,7 +54,7 @@ namespace Production.Scripts.Events {
         public void StartGame() {
             if (!HasGameStarted) {
                 HasGameStarted.Value = true;
-                OnStartGame.OnLaunchEvent.Raise(CooldownBeforeStart);
+                OnStartGame.Raise(CooldownBeforeStart);
             }
         }
 
@@ -74,18 +74,12 @@ namespace Production.Scripts.Events {
         }
 
         private void TriggerEvent() {
-            _currentEventCouple = RandomizedEvents[Random.Range(0, RandomizedEvents.Count)];
+            _currentEvent = RandomizedEvents[Random.Range(0, RandomizedEvents.Count)];
             int eventDuration = Random.Range(MinDuration, MaxDuration);
-            _currentEventCouple.OnLaunchEvent.Raise(eventDuration);
-            Debug.Log("Event Triggered : " + _currentEventCouple.OnLaunchEvent.name + " for " + eventDuration + " seconds");
+            _currentEvent.Raise(eventDuration);
+            Debug.Log("Event Triggered : " + _currentEvent.name + " for " + eventDuration + " seconds");
         }
 
-    }
-
-    [Serializable]
-    public struct EventCouple {
-        public IntEvent OnLaunchEvent;
-        public VoidEvent OnFinishedEvent;
     }
 
 }
