@@ -109,3 +109,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5628484981406504570}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7835282288050474450
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1437358374196015940}
+    m_Modifications:
+    - target: {fileID: 983990970520790986, guid: 053688654fd7a374fa2571d5819bfa07,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 983990970520790986, guid: 053688654fd7a374fa2571d5819bfa07,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 983990970520790986, guid: 053688654fd7a374fa2571d5819bfa07,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 983990970520790986, guid: 053688654fd7a374fa2571d5819bfa07,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930627442208893106, guid: 053688654fd7a374fa2571d5819bfa07,
+        type: 3}
+      propertyPath: m_Name
+      value: Branch 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 053688654fd7a374fa2571d5819bfa07, type: 3}

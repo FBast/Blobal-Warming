@@ -42,5 +42,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Model Green
       objectReference: {fileID: 0}
+    - target: {fileID: 5036196882134225712, guid: 1cf9819442be963499f6c93ad99e36e9,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5036196882134225712, guid: 1cf9819442be963499f6c93ad99e36e9,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5036196882134225712, guid: 1cf9819442be963499f6c93ad99e36e9,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.13595366
+      objectReference: {fileID: 0}
+    - target: {fileID: 5036196882134225712, guid: 1cf9819442be963499f6c93ad99e36e9,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5036196882134225712, guid: 1cf9819442be963499f6c93ad99e36e9,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.12823725
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cf9819442be963499f6c93ad99e36e9, type: 3}

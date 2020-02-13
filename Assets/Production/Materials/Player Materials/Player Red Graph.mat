@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player Purple Graph
+  m_Name: Player Red Graph
   m_Shader: {fileID: -6465566751694194690, guid: a88d8812f05c05c4e8f3cd81da00b910,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -39,6 +39,6 @@ Material:
     - _AlphaMinMax: {r: 0, g: 0.2, b: 0, a: 0}
     - _HighlightColor: {r: 3.602094, g: 7.999999, b: 1.8848165, a: 0}
     - _Offset: {r: 0, g: -0.15, b: 0, a: 0}
-    - _PlayerColor: {r: 0.7139969, g: 0, b: 4, a: 0}
+    - _PlayerColor: {r: 5.3403134, g: 0, b: 0, a: 0}
     - _SplashTiling: {r: 3, g: 3, b: 0, a: 0}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
