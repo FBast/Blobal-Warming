@@ -62,6 +62,9 @@ TagManager:
   - name: Platform
     uniqueID: 1783680005
     locked: 0
+  - name: Item
+    uniqueID: 533934415
+    locked: 0
   - name: Actor
     uniqueID: 2341731059
     locked: 0

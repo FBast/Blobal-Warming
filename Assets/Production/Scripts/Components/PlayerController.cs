@@ -205,7 +205,7 @@ namespace Production.Scripts.Components
 					Debug.Log("Wall " + wall + " lastWall " + lastWall);
 					if (wall != null && wall != lastWall || wall != null && lastWall == null)
 					{
-						
+						Debug.Log("Wall Jump at force : " + m_JumpForce + " mass " + m_Rigidbody2D.mass);
 						canDash = true;
 						if (wall.position.x < transform.position.x)
 						{
