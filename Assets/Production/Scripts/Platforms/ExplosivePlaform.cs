@@ -6,7 +6,7 @@ namespace Production.Scripts.Platforms
     {
         public GameObject ExplosionParticules;
         public GameObject ExplosionRangeCollision;
-        public AudioClip ExplosionSound;
+        public AudioSource ExplosionSound;
 
         
         public float timerAfterHit;
@@ -33,7 +33,7 @@ namespace Production.Scripts.Platforms
                 IsExploding = true;
                 ExplosionRangeCollision.SetActive(true);
                 Instantiate(ExplosionParticules, transform);
-                //ExplosionSound Play Audio
+                ExplosionSound.PlayOneShot(ExplosionSound.clip);
             }
 
             if (IsExploding) timerExplosionTime -= Time.deltaTime;
