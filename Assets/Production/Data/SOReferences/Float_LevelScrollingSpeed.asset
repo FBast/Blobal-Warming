@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27c9f9eb59f4278bc102d0820a5d5d8, type: 3}
   m_Name: Float_LevelScrollingSpeed
   m_EditorClassIdentifier: 
-  Value: 0
+  Value: 0.02

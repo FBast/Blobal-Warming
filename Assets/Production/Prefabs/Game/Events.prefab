@@ -45,14 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RandomizedEvents:
-  - OnLaunchEvent: {fileID: 11400000, guid: cd3bd73f9758e1243ac93cd1cca4de5a, type: 2}
-    OnFinishedEvent: {fileID: 11400000, guid: 8dfd25a5c9d1e2247925e13202bef4bc, type: 2}
-  OnStartGame:
-    OnLaunchEvent: {fileID: 11400000, guid: 2e9222f469eb9ce4ba6f5b16242974a2, type: 2}
-    OnFinishedEvent: {fileID: 11400000, guid: 1152d319e9e18e34ab078a87d1ef920c, type: 2}
-  OnEndGame:
-    OnLaunchEvent: {fileID: 11400000, guid: 55d3eda2e80e54f4ebe81ff54d23088d, type: 2}
-    OnFinishedEvent: {fileID: 11400000, guid: 3fce4aaf1bb7ce947aa11272db514bc0, type: 2}
+  - {fileID: 11400000, guid: 2a7840e494793384cade16c8476f1986, type: 2}
+  OnStartGame: {fileID: 11400000, guid: 2e9222f469eb9ce4ba6f5b16242974a2, type: 2}
+  OnEndGame: {fileID: 11400000, guid: 55d3eda2e80e54f4ebe81ff54d23088d, type: 2}
   HasGameStarted:
     UseConstant: 0
     ConstantValue: 0
@@ -87,7 +82,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  RandFrequency: 0.5
+  RandFrequency: 0
   MinDuration: 5
   MaxDuration: 10
 --- !u!114 &6393196867672133311
