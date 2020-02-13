@@ -21,20 +21,20 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 8512e202b39096a42bf24d7383a30123, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5137601ff147428499f3e33c40c315da, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_E6E44C92: 0
     - _AlphaEdge: 0.96
-    - _AlphaSmoothness: 0.302
+    - _AlphaSmoothness: 0
     - _ColorTransition: 0.11
     - _DetailScale: 8.51
     - _Flip: 0
-    - _LeftEdge: 0.112
+    - _LeftEdge: 0.08
     - _NormalStrength: 1
-    - _RightEdge: 0.26
-    - _Transition: 0.75
+    - _RightEdge: -0.11
+    - _Transition: 0.706
     - _TransitionOffset: 0.05
     m_Colors:
     - Color_B5A9F58E: {r: 1, g: 1, b: 1, a: 0}
