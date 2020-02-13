@@ -63,9 +63,14 @@ namespace Production.Scripts.Components
 		//Sound
 		public SoundComponent sound;
 
+		//Anim
+		public Animator animator;
+		public GameObject particle;
+
 		private void Awake()
 		{
 			sound = GetComponent<SoundComponent>();
+			animator = GetComponent<Animator>();
 			_inputEntity = GetComponent<InputEntity>();
 			m_Rigidbody2D = GetComponent<Rigidbody2D>();
 			canDash = true;
@@ -175,7 +180,7 @@ namespace Production.Scripts.Components
 				Vector3 targetVelocity = new Vector2(InvertHorizontalAxis.Value*move * 10f, m_Rigidbody2D.velocity.y);
 				// And then smoothing it out and applying it to the character
 				m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-
+				
 //				// If the input is moving the player right and the player is facing left...
 //				if (move > 0 && !m_FacingRight)
 //				{
@@ -240,6 +245,8 @@ namespace Production.Scripts.Components
 					m_Grounded = false;
 					m_Rigidbody2D.velocity = Vector2.zero;
 					m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+					animator.SetBool("Jumping", true);
+					animator.SetBool("Walking", false);
 				}
 
 				if (!m_Grounded && DoubleJumpReference.Value && canDoubleJump)
@@ -250,6 +257,13 @@ namespace Production.Scripts.Components
 					canDoubleJump = false;
 					m_Rigidbody2D.velocity = Vector2.zero;
 					m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce*0.75f));
+					animator.SetBool("Jumping", true);
+					animator.SetBool("Walking", false);
+				}
+
+				
+				else{
+				animator.SetBool("Jumping", false);
 				}
 			}
 			if (m_Grounded && jump && DoubleJumpReference.Value==false && !dash)
@@ -260,7 +274,15 @@ namespace Production.Scripts.Components
 				m_Grounded = false;
 				m_Rigidbody2D.velocity = Vector2.zero;
 				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+				animator.SetBool("Jumping", true);
+				animator.SetBool("Walking", false);
 			}
+
+			
+				else{
+				animator.SetBool("Jumping", false);
+				}
+
 			if (DoubleJumpReference.Value && !dash)
 			{
 				if (!m_Grounded && jump && canDoubleJump)
@@ -271,6 +293,9 @@ namespace Production.Scripts.Components
 					canDoubleJump = false;
 					m_Rigidbody2D.velocity = Vector2.zero;
 					m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+					animator.SetBool("Jumping", true);
+					animator.SetBool("Walking", false);
+
 				}
 				if (m_Grounded && jump)
 				{
@@ -279,6 +304,12 @@ namespace Production.Scripts.Components
 					m_Rigidbody2D.velocity = Vector2.zero;
 					m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 					m_Grounded = false;
+					animator.SetBool("Jumping", true);
+					animator.SetBool("Walking", false);
+				}
+
+				else{
+				animator.SetBool("Jumping", false);
 				}
 			}
 			if (!jump && canDash && dash && DashActiveReference.Value)
