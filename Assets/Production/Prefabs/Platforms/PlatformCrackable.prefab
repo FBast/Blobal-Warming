@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86968e16c0e92614ba1c3db468c29687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlateformHp: 5
+  PlateformHp: 50
   childCube: {fileID: 8035086415957670026}
   crackingSound: {fileID: 0}
   destroySound: {fileID: 0}
