@@ -6,19 +6,22 @@ namespace Production.Scripts.Entities {
     public class SceneEntity : MonoBehaviour {
 
         public string StartingSceneName;
-    
+
+        private AsyncOperation _asyncLoad;
+        private AsyncOperation _asyncUnload;
+        
         private void Start() {
             LoadScene(StartingSceneName);
         }
 
         public void UnloadScene(string scene) {
-            if (!UnityEngine.SceneManagement.SceneManager.GetSceneByName(scene).isLoaded) return;
+            if (!SceneManager.GetSceneByName(scene).isLoaded || _asyncUnload != null) return;
             Debug.Log("Unloading " + scene + "...");
             StartCoroutine(UnloadSceneAsync(scene));
         }
 		
         public void LoadScene(string scene) {
-            if (UnityEngine.SceneManagement.SceneManager.GetSceneByName(scene).isLoaded) return;
+            if (SceneManager.GetSceneByName(scene).isLoaded || _asyncLoad != null) return;
             Debug.Log("Loading " + scene + "...");
             StartCoroutine(LoadSceneAsync(scene));
         }
@@ -38,20 +41,22 @@ namespace Production.Scripts.Entities {
         }
 		
         private IEnumerator UnloadSceneAsync(string scene) {
-            AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(scene);
+            _asyncUnload = SceneManager.UnloadSceneAsync(scene);
             //Wait until the last operation fully loads to return anything
-            while (!asyncLoad.isDone) {
+            while (!_asyncUnload.isDone) {
                 yield return null;
             }
+            _asyncUnload = null;
             Debug.Log(scene + " unloaded !");
         }
 
         private IEnumerator LoadSceneAsync(string scene) {
-            AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+            _asyncLoad = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
             //Wait until the last operation fully loads to return anything
-            while (!asyncLoad.isDone) {
+            while (!_asyncLoad.isDone) {
                 yield return null;
             }
+            _asyncLoad = null;
             Debug.Log(scene + " loaded !");
         }
 

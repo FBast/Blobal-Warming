@@ -5,12 +5,48 @@ namespace Production.Scripts.Platforms
 {
     public class CrakeblePlateform : MonoBehaviour
     {
-        public int PlateformHp = 4;
-        public GameObject childCube;
-        public AudioClip crackingSound;
-        public AudioClip destroySound;
-        private bool IsBeingSteppedOn;
+        public float TimerBeforeCrack = 3f;
+        public float TimerBeforeDestruct = 1f;
+        public GameObject RockFallingParticle;
+        private AudioSource crackingSound;
 
+        private bool _hasBeenSteppedOn;
+
+        private bool _isDead;
+        //public int PlateformHp = 4;
+        //public GameObject childCube;
+        //private bool IsBeingSteppedOn;
+
+        private void Start()
+        {
+            _hasBeenSteppedOn = false;
+            crackingSound = GetComponent<AudioSource>();
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            _hasBeenSteppedOn = true;
+        }
+
+        private void Update()
+        {
+            if (_hasBeenSteppedOn)
+            {
+                TimerBeforeCrack -= Time.deltaTime;
+            }
+
+            if (TimerBeforeCrack <= 0)
+            {
+                Instantiate(RockFallingParticle, transform);
+                crackingSound.PlayOneShot(crackingSound.clip);
+                TimerBeforeDestruct -= Time.deltaTime;
+            }
+
+            if (TimerBeforeDestruct <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
 
 
         /*private void OnTriggerEnter2D(Collider2D other)
@@ -24,17 +60,13 @@ namespace Production.Scripts.Platforms
         }
     }*/
 
-        private void OnCollisionEnter2D(Collision2D other)
+        /*private void OnCollisionEnter2D(Collision2D other)
         {
             if (!IsBeingSteppedOn)
             {
                 PlateformHp--;
                 Debug.Log("Touché ! HP = " + PlateformHp);
 
-                if (crackingSound != null)
-                {
-                    AudioSource.PlayClipAtPoint(crackingSound, transform.position);
-                }
 
 
                 if (PlateformHp == 1)
@@ -57,7 +89,7 @@ namespace Production.Scripts.Platforms
         private void OnCollisionExit2D(Collision2D other)
         {
             IsBeingSteppedOn = false;
-        }
+        }*/
     }
     
     
