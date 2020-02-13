@@ -38,7 +38,7 @@ Material:
     - _ShapeBland: 1
     - _Tiling: 4
     - _TimeMultiplier: 0
-    - _Transition: 0.167
+    - _Transition: 0.11
     - _Width: 0.448
     m_Colors:
     - _LightMinMax: {r: 0.25, g: 2, b: 0, a: 0}
