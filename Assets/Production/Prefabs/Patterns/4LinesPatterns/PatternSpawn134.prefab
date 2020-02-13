@@ -9,41 +9,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5976623633397949000, guid: ed5e0d7ba8c6d0e4a92860ae5d9e7d61,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5976623633397949000, guid: ed5e0d7ba8c6d0e4a92860ae5d9e7d61,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5976623633397949000, guid: ed5e0d7ba8c6d0e4a92860ae5d9e7d61,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5976623633397949000, guid: ed5e0d7ba8c6d0e4a92860ae5d9e7d61,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5976623633397949000, guid: ed5e0d7ba8c6d0e4a92860ae5d9e7d61,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5976623633397949000, guid: ed5e0d7ba8c6d0e4a92860ae5d9e7d61,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5976623633397949000, guid: ed5e0d7ba8c6d0e4a92860ae5d9e7d61,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5976623633397949000, guid: ed5e0d7ba8c6d0e4a92860ae5d9e7d61,
-        type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
@@ -80,41 +45,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Couloir1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568178667434711861, guid: ad2673e1e794f81498d7674b100782de,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568178667434711861, guid: ad2673e1e794f81498d7674b100782de,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568178667434711861, guid: ad2673e1e794f81498d7674b100782de,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568178667434711861, guid: ad2673e1e794f81498d7674b100782de,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568178667434711861, guid: ad2673e1e794f81498d7674b100782de,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568178667434711861, guid: ad2673e1e794f81498d7674b100782de,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568178667434711861, guid: ad2673e1e794f81498d7674b100782de,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6568178667434711861, guid: ad2673e1e794f81498d7674b100782de,
         type: 3}
@@ -224,41 +154,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Couloir3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3151903495632957731, guid: 3b29901d40f39c345b6980b19bdcfcad,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3151903495632957731, guid: 3b29901d40f39c345b6980b19bdcfcad,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3151903495632957731, guid: 3b29901d40f39c345b6980b19bdcfcad,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3151903495632957731, guid: 3b29901d40f39c345b6980b19bdcfcad,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3151903495632957731, guid: 3b29901d40f39c345b6980b19bdcfcad,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3151903495632957731, guid: 3b29901d40f39c345b6980b19bdcfcad,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3151903495632957731, guid: 3b29901d40f39c345b6980b19bdcfcad,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3151903495632957731, guid: 3b29901d40f39c345b6980b19bdcfcad,
         type: 3}

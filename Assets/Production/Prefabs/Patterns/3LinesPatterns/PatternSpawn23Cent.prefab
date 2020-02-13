@@ -9,26 +9,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5319521109545338671, guid: 1b75f809a22e23749b9168d4f6043d8c,
         type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5319521109545338671, guid: 1b75f809a22e23749b9168d4f6043d8c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5319521109545338671, guid: 1b75f809a22e23749b9168d4f6043d8c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5319521109545338671, guid: 1b75f809a22e23749b9168d4f6043d8c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5319521109545338671, guid: 1b75f809a22e23749b9168d4f6043d8c,
-        type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
@@ -140,41 +120,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Couloir2Centre
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420749569204856452, guid: bad2dce39fec9d149945d1521e24161e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420749569204856452, guid: bad2dce39fec9d149945d1521e24161e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420749569204856452, guid: bad2dce39fec9d149945d1521e24161e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420749569204856452, guid: bad2dce39fec9d149945d1521e24161e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420749569204856452, guid: bad2dce39fec9d149945d1521e24161e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420749569204856452, guid: bad2dce39fec9d149945d1521e24161e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420749569204856452, guid: bad2dce39fec9d149945d1521e24161e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6420749569204856452, guid: bad2dce39fec9d149945d1521e24161e,
         type: 3}
