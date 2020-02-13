@@ -22,7 +22,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -216
+        value: -214
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -30,17 +30,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 5
-        value: 47
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 10.833333
-        value: -216
+        time: 5.133333
+        value: 61
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -51,7 +42,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: PanelForTutoBG/PanelForTutoBG (1)/PanelTuto
+    path: PanelForTutoBG (1)/PanelTuto
     classID: 224
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -63,7 +54,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2724122091
+      path: 2691968962
       attribute: 538195251
       script: {fileID: 0}
       typeID: 224
@@ -75,7 +66,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 10.833333
+    m_StopTime: 5.133333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -96,7 +87,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -216
+        value: -214
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -104,17 +95,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 5
-        value: 47
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 10.833333
-        value: -216
+        time: 5.133333
+        value: 61
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -125,7 +107,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: PanelForTutoBG/PanelForTutoBG (1)/PanelTuto
+    path: PanelForTutoBG (1)/PanelTuto
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves: []
