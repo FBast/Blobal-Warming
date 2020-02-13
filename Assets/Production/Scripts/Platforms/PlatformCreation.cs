@@ -11,6 +11,7 @@ namespace Production.Scripts.Platforms {
 
         [Header("Internal References")]
         public List<GameObject> CurrentPlatforms = new List<GameObject>();
+        public Transform PlatformSpawn;
         
         [Header("SO References")] 
         public FloatReference CurrentTimeReference; //Recupère depuis un SO le temps actuel
@@ -88,19 +89,19 @@ namespace Production.Scripts.Platforms {
             {
                 switch (_nbOfPlatformsToSpawn) {
                     case 4:
-                        _newPattern = Instantiate(PatternPrefabs4PF4L[Random.Range(0, PatternPrefabs4PF4L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs4PF4L[Random.Range(0, PatternPrefabs4PF4L.Count)], PlatformSpawn);
                         break;
             
                     case 3:                
-                        _newPattern = Instantiate(PatternPrefabs3PF4L[Random.Range(0, PatternPrefabs3PF4L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs3PF4L[Random.Range(0, PatternPrefabs3PF4L.Count)], PlatformSpawn);
                         break; 
             
                     case 2:
-                        _newPattern = Instantiate(PatternPrefabs2PF4L[Random.Range(0, PatternPrefabs2PF4L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs2PF4L[Random.Range(0, PatternPrefabs2PF4L.Count)], PlatformSpawn);
                         break;
             
                     case 1 :
-                        _newPattern = Instantiate(PatternPrefabs1PF4L[Random.Range(0, PatternPrefabs1PF4L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs1PF4L[Random.Range(0, PatternPrefabs1PF4L.Count)], PlatformSpawn);
                         break;
             
                     default: 
@@ -115,19 +116,19 @@ namespace Production.Scripts.Platforms {
                 switch (_nbOfPlatformsToSpawn) {
            
                     case 3:                
-                        _newPattern = Instantiate(PatternPrefabs3PF3L[Random.Range(0, PatternPrefabs3PF3L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs3PF3L[Random.Range(0, PatternPrefabs3PF3L.Count)], PlatformSpawn);
                         break; 
             
                     case 2:
-                        _newPattern = Instantiate(PatternPrefabs2PF3L[Random.Range(0, PatternPrefabs2PF3L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs2PF3L[Random.Range(0, PatternPrefabs2PF3L.Count)], PlatformSpawn);
                         break;
             
                     case 1 :
-                        _newPattern = Instantiate(PatternPrefabs1PF3L[Random.Range(0, PatternPrefabs1PF3L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs1PF3L[Random.Range(0, PatternPrefabs1PF3L.Count)], PlatformSpawn);
                         break;
             
                     default: 
-                        _newPattern = Instantiate(PatternPrefabs3PF3L[Random.Range(0, PatternPrefabs3PF3L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs3PF3L[Random.Range(0, PatternPrefabs3PF3L.Count)], PlatformSpawn);
                         break; 
                 }
                 _use4Lines = true;

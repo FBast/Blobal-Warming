@@ -37,8 +37,8 @@ Material:
     - _PlayerSize: 0
     - _Shape: 0.205
     - _Smoothness: 1
-    - _TimeMultiplier: 0.1
-    - _WaveScale: 0.1
+    - _TimeMultiplier: 0.05
+    - _WaveScale: 0.02
     m_Colors:
     - _BubbleColor: {r: 0.09531861, g: 0.20636792, b: 0.3962264, a: 0}
     - _Color1: {r: 0.2783019, g: 0.4463163, b: 1, a: 0}
