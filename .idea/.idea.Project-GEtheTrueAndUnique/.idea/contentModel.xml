@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\nathan.mansard\.Rider2019.2\system\extResources" t="IncludeRecursive" />
@@ -234,14 +234,17 @@
               <e p="SpawnPlatforms.cs" t="Include" />
             </e>
             <e p="UI" t="Include">
+              <e p="MenuEventsEntity.cs" t="Include" />
               <e p="ScoreMenuEntity.cs" t="Include" />
               <e p="UIEntity.cs" t="Include" />
             </e>
             <e p="Utils" t="Include">
               <e p="NameGenerator.cs" t="Include" />
+              <e p="ReferenceInitializer.cs" t="Include" />
             </e>
           </e>
         </e>
+        <e p="TrunkSlider.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
