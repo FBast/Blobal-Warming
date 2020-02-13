@@ -4,43 +4,45 @@ namespace Production.Scripts.Platforms
 {
     public class ExplosivePlaform : MonoBehaviour
     {
-        public float timer;
-        public float timerAfterDetection;
-        private bool IsActive;
-        private bool timerdestroypalyer;
+        public GameObject ExplosionParticules;
         public GameObject ExplosionRangeCollision;
-        public GameObject PlaneColor;
-        public Material blue;
-        public Material black;
+        public AudioClip ExplosionSound;
+
+        
+        public float timerAfterHit;
+        public float timerExplosionTime;
+        private bool IsActive;
+        private bool IsExploding;
 
         private void Start()
         {
             ExplosionRangeCollision.SetActive(false);
         }
+        
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            IsActive = true;
+            //ExplosionAnimator.SetTrigger("Explode");
+        }
 
         void Update()
         {
-            if (IsActive) timer -= Time.deltaTime;
-
-
-            if (timer <= 0)
+            if (IsActive) timerAfterHit -= Time.deltaTime;
+            if (timerAfterHit <= 0)
             {
-                timerdestroypalyer = true;
+                IsExploding = true;
                 ExplosionRangeCollision.SetActive(true);
-                //PlaneColor.GetComponent<MeshRenderer>().material = blue;
+                Instantiate(ExplosionParticules, transform);
+                //ExplosionSound Play Audio
             }
 
-            if (timerdestroypalyer) timerAfterDetection -= Time.deltaTime;
+            if (IsExploding) timerExplosionTime -= Time.deltaTime;
 
-            if (timerAfterDetection <= 0)
+            if (timerExplosionTime <= 0)
             {
                 Destroy(gameObject);
             }
         }
-        private void OnCollisionEnter2D(Collision2D other)
-        {
-            IsActive = true;
-            //PlaneColor.GetComponent<MeshRenderer>().material = black;
-        }
+
     }
 }
