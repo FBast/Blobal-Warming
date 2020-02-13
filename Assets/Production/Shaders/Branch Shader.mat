@@ -25,18 +25,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Boolean_E6E44C92: 0
+    - Boolean_E6E44C92: 1
     - _AlphaEdge: 0.96
     - _AlphaSmoothness: 0.078
     - _ColorTransition: 0.11
     - _DetailScale: 8.51
     - _Flip: 0
-    - _LeftEdge: 0.16
+    - _LeftEdge: 0.47
     - _NormalStrength: 1
-    - _RightEdge: -0.28
-    - _Transition: 0.75
+    - _RightEdge: 0
+    - _Transition: 0.686
     - _TransitionOffset: 0.05
     m_Colors:
-    - Color_B5A9F58E: {r: 1, g: 1, b: 1, a: 0}
-    - _Offset: {r: 0, g: -2, b: 0, a: 0}
-    - _Tiling: {r: 1, g: 5, b: 0, a: 0}
+    - Color_B5A9F58E: {r: 2.6701567, g: 1.8137475, b: 0.79348993, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
