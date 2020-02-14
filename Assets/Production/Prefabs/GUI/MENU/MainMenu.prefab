@@ -1506,7 +1506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tree Jumper
+  m_text: Blobal Warming
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57432d280359a814ab5b0aa7882d9777, type: 2}
   m_sharedMaterial: {fileID: 912253256366897661, guid: 57432d280359a814ab5b0aa7882d9777,
@@ -1540,7 +1540,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 150
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
