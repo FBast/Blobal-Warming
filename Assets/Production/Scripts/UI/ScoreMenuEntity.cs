@@ -63,8 +63,26 @@ namespace Production.Scripts.UI {
                 {
                     if (LastPlayers.Exists(item => item.PlayerName == BestScores[i].PlayerName))
                     {
-                        _nameText.color = Color.green;
-                        _scoreText.color = Color.green;
+                        if (BestScores[i].PlayerID == 0)
+                        {
+                            _nameText.color = Color.blue;
+                            _scoreText.color = Color.blue;
+                        }
+                        if (BestScores[i].PlayerID == 1)
+                        {
+                            _nameText.color = Color.green;
+                            _scoreText.color = Color.green;
+                        }
+                        if (BestScores[i].PlayerID == 2)
+                        {
+                            _nameText.color = Color.red;
+                            _scoreText.color = Color.red;
+                        }
+                        if (BestScores[i].PlayerID == 3)
+                        {
+                            _nameText.color = Color.yellow;
+                            _scoreText.color = Color.yellow;
+                        }
                     }
                 }
             }
