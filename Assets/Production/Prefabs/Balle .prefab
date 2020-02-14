@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6032321485459514974}
   - component: {fileID: 6032321485459514973}
   - component: {fileID: 3793204747180013294}
+  - component: {fileID: 966989335771582869}
   m_Layer: 0
   m_Name: 'Balle '
   m_TagString: Ball
@@ -85,6 +86,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 6032321485459514974}
   ballLaunchSpeed: 3
+--- !u!114 &966989335771582869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032321485459514972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0915651b300adb4c959050c280b32d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sounds:
+  - name: Bounce
+    clip: {fileID: 8300000, guid: 652c96ac58dd13d4b9ee0a2107f535af, type: 3}
+    Volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
 --- !u!1001 &6715150548855907872
 PrefabInstance:
   m_ObjectHideFlags: 0

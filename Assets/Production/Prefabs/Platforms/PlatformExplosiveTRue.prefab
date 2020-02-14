@@ -82,29 +82,6 @@ MonoBehaviour:
   ExplosionRangeCollision: {fileID: 1349044785442457634}
   timerAfterHit: 2
   timerExplosionTime: 1
---- !u!114 &1149522271515608173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868635435161972247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0915651b300adb4c959050c280b32d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sounds:
-  - name: ExplosionSound
-    clip: {fileID: 8300000, guid: 181008542edfaa44f829ec3eaef47804, type: 3}
-    Volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: CountdownSound
-    clip: {fileID: 8300000, guid: 11d88b258ef5c3f4f81e1e2fdf709cec, type: 3}
-    Volume: 1
-    pitch: 1
-    source: {fileID: 0}
 --- !u!61 &58115088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -221,6 +198,66 @@ PrefabInstance:
     - target: {fileID: 6930691156639378056, guid: 118c92e36f325e942b0aeff34381d894,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[0].name
+      value: ExplosionSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[0].Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 181008542edfaa44f829ec3eaef47804, type: 3}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[1].name
+      value: CountdownSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 11d88b258ef5c3f4f81e1e2fdf709cec, type: 3}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[1].Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[2].name
+      value: Land
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2583f7dc626c93b4986eda16883c6568, type: 3}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[2].Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[2].pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8715261442775398294, guid: 118c92e36f325e942b0aeff34381d894,
