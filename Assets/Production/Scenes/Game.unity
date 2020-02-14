@@ -1663,6 +1663,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cameras
       objectReference: {fileID: 0}
+    - target: {fileID: 3557631602154566428, guid: 0cccafea8972d7a439aea886dc162435,
+        type: 3}
+      propertyPath: m_ShowCustomSorter
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cccafea8972d7a439aea886dc162435, type: 3}
 --- !u!1001 &3734068366047087783

@@ -234,13 +234,11 @@
               <e p="SpawnPlatforms.cs" t="Include" />
             </e>
             <e p="UI" t="Include">
-              <e p="MenuEventsEntity.cs" t="Include" />
               <e p="ScoreMenuEntity.cs" t="Include" />
               <e p="UIEntity.cs" t="Include" />
             </e>
             <e p="Utils" t="Include">
               <e p="NameGenerator.cs" t="Include" />
-              <e p="ReferenceInitializer.cs" t="Include" />
             </e>
           </e>
         </e>
