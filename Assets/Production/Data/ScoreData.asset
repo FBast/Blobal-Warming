@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ScoreData
   m_EditorClassIdentifier: 
   ScoreList: []
-  PlayerNumberInLastGame: 1
+  PlayerNumberInLastGame: 0
