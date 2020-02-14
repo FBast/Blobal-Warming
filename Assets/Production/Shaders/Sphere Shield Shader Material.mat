@@ -28,6 +28,6 @@ Material:
     - Vector1_5DC207FE: 3
     - Vector1_8867B932: 1.5
     - Vector1_99A1DC17: 3
-    - Vector1_F933BF2C: 0.2
+    - Vector1_F933BF2C: 0.04
     m_Colors:
-    - Color_2870D1BA: {r: 16, g: 5.709804, b: 2.8235295, a: 0}
+    - Color_2870D1BA: {r: 95.87451, g: 14.556863, b: 0, a: 0}
