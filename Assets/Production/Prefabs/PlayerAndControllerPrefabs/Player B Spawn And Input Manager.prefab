@@ -430,22 +430,37 @@ MonoBehaviour:
   - name: DashFx
     clip: {fileID: 8300000, guid: e63b85ca61d9cb74da12c29efbd30926, type: 3}
     Volume: 0.5
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
   - name: HurtFx
     clip: {fileID: 8300000, guid: 5d192530c80c8ed44841ffc47a529519, type: 3}
     Volume: 0.5
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
   - name: JumpFx
-    clip: {fileID: 8300000, guid: 5f3bb12a80761da45b7707ae90e8d702, type: 3}
-    Volume: 0.5
-    pitch: 0
+    clip: {fileID: 8300000, guid: d905203da56adb14b97bf7dd0e710e6c, type: 3}
+    Volume: 0.2
+    pitch: 1
     source: {fileID: 0}
-  - name: LandFx
-    clip: {fileID: 8300000, guid: 6b47b956e1bec2b46bf416f85e9f892b, type: 3}
+  - name: Points
+    clip: {fileID: 8300000, guid: 46b23f2967b1ab84c8c3d864ee53578f, type: 3}
     Volume: 0.5
-    pitch: 0
+    pitch: 1
+    source: {fileID: 0}
+  - name: ShieldBreak
+    clip: {fileID: 8300000, guid: 4defaebd07aecc44ab53929de7e298eb, type: 3}
+    Volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ItemFx
+    clip: {fileID: 8300000, guid: 97774e12b70346040be6e71ae6b346c5, type: 3}
+    Volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+  - name: Inversion
+    clip: {fileID: 8300000, guid: 6f4f20655def21a47959327e3f53955e, type: 3}
+    Volume: 0.6
+    pitch: 1
     source: {fileID: 0}
 --- !u!114 &4769225343713486218
 MonoBehaviour:
@@ -537,7 +552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5340954250648721945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4432683606654191386}

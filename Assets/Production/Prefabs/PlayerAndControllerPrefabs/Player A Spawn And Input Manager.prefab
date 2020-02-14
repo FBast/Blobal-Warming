@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &377465836193336373
 Transform:
   m_ObjectHideFlags: 0
@@ -355,6 +355,26 @@ MonoBehaviour:
     Volume: 0.2
     pitch: 1
     source: {fileID: 0}
+  - name: Points
+    clip: {fileID: 8300000, guid: 46b23f2967b1ab84c8c3d864ee53578f, type: 3}
+    Volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ShieldBreak
+    clip: {fileID: 8300000, guid: 4defaebd07aecc44ab53929de7e298eb, type: 3}
+    Volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ItemFx
+    clip: {fileID: 8300000, guid: 97774e12b70346040be6e71ae6b346c5, type: 3}
+    Volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+  - name: Inversion
+    clip: {fileID: 8300000, guid: 6f4f20655def21a47959327e3f53955e, type: 3}
+    Volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
 --- !u!114 &4261807211159568606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,7 +693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8261828207225065782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 377465836193336373}

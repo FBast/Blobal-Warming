@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
-        m_Texture: {fileID: 2800000, guid: 2fbdd26fb3210e64fbc7447e3c5b5922, type: 3}
+        m_Texture: {fileID: 2800000, guid: afa4321ae646c2948901bbaf9fd2802b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailTexture:
@@ -86,7 +86,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PlatformMask:
-        m_Texture: {fileID: 2800000, guid: 75d1b277df26f1945a01fe06db30df5b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9d7dbe57aa7217a40b69e5a953b35f43, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PlatformTexture:
@@ -113,8 +113,8 @@ Material:
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
-    - _Detail: 0
-    - _DetailDepth: 2
+    - _Detail: 1
+    - _DetailDepth: 10
     - _DetailMerge: 0.527
     - _DetailScale: 10
     - _DstBlend: 0
@@ -148,7 +148,7 @@ Material:
     - _BaseOffset: {r: 0, g: 0, b: 0, a: 0}
     - _BaseTiling: {r: 1, g: 1, b: 0, a: 0}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _DetailColor: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 0}
+    - _DetailColor: {r: 57.97647, g: 57.97647, b: 57.97647, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShapeOffset: {r: 0, g: 0, b: 0, a: 0}
     - _ShapeTiling: {r: 1, g: 1, b: 0, a: 0}

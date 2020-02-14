@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Production.Plugins.RyanScriptableObjects.SOReferences.FloatReference;
 using Production.Plugins.RyanScriptableObjects.SOReferences.GameObjectListReference;
 using Production.Plugins.RyanScriptableObjects.SOReferences.GameObjectReference;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Production.Scripts.Platforms
 {
@@ -13,19 +15,17 @@ namespace Production.Scripts.Platforms
         public FloatReference EndTimeReference; //Recupère depuis un SO le temps actuel
 
         [Header("Difficulty Parameters")]
-    
         public int DifficultyIndiceMax;
         public int DifficultyIndiceMin;
         public float DiffcultIndiceMultiplicator;
         [SerializeField] private int DifficultyIndice;
 
         [Header("Prefabs")]
-        public List<GameObject> PlatformPrefabs;
-        public List<int> PlatformDifficulty;
+        public List<PlateformDifficulty> PlateformDifficulties = new List<PlateformDifficulty>();
         public List<GameObject> PlatformThatCanSpawn;
-        Dictionary<GameObject, int> PlatformAndDifficultyDic = new Dictionary<GameObject, int>();
         public List<Transform> PlatformBirthPlace;
 
+        private Dictionary<GameObject, int> _platformAndDifficultyDic = new Dictionary<GameObject, int>();
         private float _realTime => EndTimeReference.Value - CurrentTimeReference.Value;
 
         private void Start() {
@@ -37,32 +37,34 @@ namespace Production.Scripts.Platforms
                 }
                 //List all transform childs of the pattern
             }
-        
-            for(int i = 0; i < PlatformPrefabs.Count; i++)
-            {
-                PlatformAndDifficultyDic.Add(PlatformPrefabs[i], PlatformDifficulty[i]);
-                //écrit le dictionnaire de rapport prefab/difficulty
-            }
-        
-            DifficultyIndice = Mathf.RoundToInt(_realTime * DifficultyIndiceMax / EndTimeReference.Value * DiffcultIndiceMultiplicator  + DifficultyIndiceMin);
-            //Debug.Log("Difficulty rolled : " + DifficultyIndice);
 
-            foreach (KeyValuePair<GameObject, int> pair in PlatformAndDifficultyDic) 
-            {
-                if (pair.Value <= DifficultyIndice)
-                {
-                    PlatformThatCanSpawn.Add(pair.Key);
-                    //Use pair.Key to get the key
-                    //Use pair.Value for value
+            DifficultyIndice = Mathf.RoundToInt(_realTime * DifficultyIndiceMax / EndTimeReference.Value * DiffcultIndiceMultiplicator  + DifficultyIndiceMin);
+            Debug.Log("RealTime : " + _realTime);
+            Debug.Log("Difficulty rolled : " + DifficultyIndice);
+
+            foreach (PlateformDifficulty plateformDifficulty in PlateformDifficulties) {
+                if (plateformDifficulty.DifficultyIndice <= DifficultyIndice) {
+                    for (int i = 0; i < plateformDifficulty.Redundancy; i++) {
+                        PlatformThatCanSpawn.Add(plateformDifficulty.PlateformPrefab);
+                        //Use pair.Key to get the key
+                        //Use pair.Value for value
+                    }
                 }
             }
-
-            foreach (Transform couloir in PlatformBirthPlace)
-            {
-                Instantiate(PlatformPrefabs[Random.Range(0, PlatformThatCanSpawn.Count)], couloir);
+            foreach (Transform couloir in PlatformBirthPlace) {
+                Instantiate(PlatformThatCanSpawn[Random.Range(0, PlatformThatCanSpawn.Count)], couloir);
                 //generate a random platform in each child of the pattern
             }
            
         }
+    }
+
+    [Serializable]
+    public struct PlateformDifficulty {
+
+        public GameObject PlateformPrefab;
+        public int DifficultyIndice;
+        public int Redundancy;
+
     }
 }
