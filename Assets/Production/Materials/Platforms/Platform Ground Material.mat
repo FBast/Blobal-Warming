@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Platform Trampoline Material
+  m_Name: Platform Ground Material
   m_Shader: {fileID: -6465566751694194690, guid: ec8befde95f78d345981668939180f22,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -86,7 +86,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PlatformMask:
-        m_Texture: {fileID: 2800000, guid: b24b27616388adf40ad24f0df0bc99a4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 75d1b277df26f1945a01fe06db30df5b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PlatformTexture:
@@ -98,7 +98,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TopTexture:
-        m_Texture: {fileID: 2800000, guid: d23490b48044c7941b865b7218e1d87e, type: 3}
+        m_Texture: {fileID: 2800000, guid: e34a8f49953235a4ba7a6e0b0ceb6880, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -108,25 +108,25 @@ Material:
     - Vector1_B29ABE99: 0
     - Vector1_E2436A9B: 10
     - _AlphaClip: 0
-    - _AlphaClipping: 0.341
+    - _AlphaClipping: 0.791
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _Detail: 0
-    - _DetailDepth: 2.32
-    - _DetailMerge: 0.5
-    - _DetailScale: 7.36
+    - _DetailDepth: 3.41
+    - _DetailMerge: 0.577
+    - _DetailScale: 10
     - _DstBlend: 0
-    - _EdgeDetail: 0.559
+    - _EdgeDetail: 0.15
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _NormalStrength: 2
+    - _NormalStrength: 1.718
     - _OcclusionStrength: 1
-    - _Opacity: 0.864
+    - _Opacity: 1
     - _OverlayBias: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -135,9 +135,9 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TextureContrast: 10.1
-    - _TopBlend: 1
-    - _TopHardness: 0.868
+    - _TextureContrast: 10
+    - _TopBlend: 0.8
+    - _TopHardness: 0.873
     - _TopSharpness: 0.5
     - _Top_Sharpness: 0.5
     - _WorkflowMode: 1
@@ -146,14 +146,14 @@ Material:
     - Color_D142E153: {r: 0.9339623, g: 0.04846031, b: 0.04846031, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _BaseOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _BaseTiling: {r: 5, g: 20, b: 0, a: 0}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _DetailColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShapeOffset: {r: 0, g: 0, b: 0, a: 0}
     - _ShapeTiling: {r: 1, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _TopColor: {r: 1.9999998, g: 0.8481675, b: 0, a: 0}
+    - _TopColor: {r: 0.30588236, g: 1.1921569, b: 0.09411765, a: 0}
     - _TopMinMax: {r: -0.71, g: 1.26, b: 0, a: 0}
     - _TopOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _TopTiling: {r: 2, g: 3, b: 0, a: 0}
+    - _TopTiling: {r: 4, g: 5, b: 0, a: 0}

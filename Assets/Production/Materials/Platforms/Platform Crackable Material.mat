@@ -116,7 +116,7 @@ Material:
     - _Detail: 0
     - _DetailDepth: 2
     - _DetailMerge: 0.5
-    - _DetailScale: 0
+    - _DetailScale: 10
     - _DstBlend: 0
     - _EdgeDetail: 0.416
     - _EnvironmentReflections: 1
@@ -135,7 +135,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TextureContrast: 10
+    - _TextureContrast: 2.32
     - _TopBlend: 1
     - _TopHardness: 0.858
     - _TopSharpness: 0.5
