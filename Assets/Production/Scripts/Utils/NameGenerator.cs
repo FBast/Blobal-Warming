@@ -21,6 +21,7 @@ namespace Production.Scripts.Utils
             "Brilliant",
             "Shy",
             "Mad",
+            "Triso",
             "Foolish",
             "Brainwashed",
             "Dumb",

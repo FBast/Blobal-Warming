@@ -71,8 +71,7 @@ namespace Production.Scripts.Entities
                     if (XCI.GetButton(val, XboxController) == true)
                     {
                         HasDetected = true;
-                        Player.SetActive(true);
-                         _spawnEntity.FirstSpawn();
+                        _spawnEntity.FirstSpawn();
                     }
                 }
 
@@ -81,7 +80,6 @@ namespace Production.Scripts.Entities
                     if (XCI.GetAxis(ax, XboxController) > 0 || XCI.GetAxis(ax, XboxController) < 0)
                     {
                         HasDetected = true;
-                        Player.SetActive(true);
                         _spawnEntity.FirstSpawn();
                     }
                 }

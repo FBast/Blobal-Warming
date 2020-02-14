@@ -196,7 +196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7360989079223737023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1231847193341855126}
@@ -223,7 +223,7 @@ MonoBehaviour:
   CurrentTimeReference:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: b891c568fa51d3c499740ddacf0c53eb, type: 2}
+    Variable: {fileID: 11400000, guid: 56364946be5fd804b86ba15fc8811756, type: 2}
   EndTimeReference:
     UseConstant: 0
     ConstantValue: 180

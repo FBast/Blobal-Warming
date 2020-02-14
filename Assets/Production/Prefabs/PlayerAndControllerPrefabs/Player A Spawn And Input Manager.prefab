@@ -20,13 +20,14 @@ GameObject:
   - component: {fileID: 8853044095909710973}
   - component: {fileID: 6885408828418363245}
   - component: {fileID: 4261807211159568606}
+  - component: {fileID: 342657708651865249}
   m_Layer: 0
   m_Name: Player A GameObject
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &377465836193336373
 Transform:
   m_ObjectHideFlags: 0
@@ -191,6 +192,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   sound: {fileID: 0}
+  animator: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!114 &5806316879722304384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +355,26 @@ MonoBehaviour:
     Volume: 0.2
     pitch: 1
     source: {fileID: 0}
+  - name: Points
+    clip: {fileID: 8300000, guid: 46b23f2967b1ab84c8c3d864ee53578f, type: 3}
+    Volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ShieldBreak
+    clip: {fileID: 8300000, guid: 4defaebd07aecc44ab53929de7e298eb, type: 3}
+    Volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ItemFx
+    clip: {fileID: 8300000, guid: 97774e12b70346040be6e71ae6b346c5, type: 3}
+    Volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+  - name: Inversion
+    clip: {fileID: 8300000, guid: 6f4f20655def21a47959327e3f53955e, type: 3}
+    Volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
 --- !u!114 &4261807211159568606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +389,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Arrow: {fileID: 7180158107082896881}
   arrowY: 8
+--- !u!95 &342657708651865249
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884498482304630267}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b9420585e8b23a4e9858e55fb37593e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3235078235054529355
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,8 +652,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1953236237
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ee09064370211334abdec1b1410d1cff, type: 3}
   m_Color: {r: 0, g: 0.51832867, b: 1, a: 1}
