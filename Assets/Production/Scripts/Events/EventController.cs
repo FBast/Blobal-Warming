@@ -93,7 +93,6 @@ namespace Production.Scripts.Events {
                 PlayerBGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
                 PlayerCGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
                 PlayerDGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
-                Debug.Log("Wind : " + windEffect.x + " " + windEffect.y + " " + windEffect.z);
             });
             LeftWindEffect.SetActive(direction > 0);
             RightWindEffect.SetActive(direction < 0);

@@ -4,8 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Production.Scripts.Entities
-{
+namespace Production.Scripts.UI {
     public class ScoreMenuEntity : MonoBehaviour
     {
         public GameObject ScoreInputPrefab;

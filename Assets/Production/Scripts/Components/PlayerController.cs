@@ -272,7 +272,6 @@ namespace Production.Scripts.Components
 			{
 				if (m_Grounded && jump && DoubleJumpReference.Value==false)// && !dash)
 				{
-					Debug.Log("Normal Jump, no dJump");
 					sound.Play("JumpFx");
 					// Add a vertical force to the player.
 					m_Grounded = false;
@@ -291,7 +290,6 @@ namespace Production.Scripts.Components
 				{
 					if (!m_Grounded && jump && canDoubleJump)
 					{
-						Debug.Log("DoubleJump and !dash");
 						sound.Play("JumpFx");
 						m_Grounded = false;
 						canDoubleJump = false;
@@ -303,7 +301,6 @@ namespace Production.Scripts.Components
 					}
 					if (m_Grounded && jump)
 					{
-						Debug.Log("Jump w dJump");
 						sound.Play("JumpFx");
 						m_Rigidbody2D.velocity = Vector2.zero;
 						m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
@@ -320,7 +317,6 @@ namespace Production.Scripts.Components
 			
 			if (!jump && canDash && dash && DashActiveReference.Value)
 			{
-				Debug.Log("Dash");
 				sound.Play("DashFx");
 				m_Rigidbody2D.velocity = Vector2.zero;
 				Vector2 dashDir = new Vector2(dashX, dashY);
