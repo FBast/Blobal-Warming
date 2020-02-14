@@ -1667,6 +1667,11 @@ PrefabInstance:
       propertyPath: Arrow
       value: 
       objectReference: {fileID: 1649616084}
+    - target: {fileID: 7285665577430396210, guid: edb33372aa93f3040bbb42f6ac0d0137,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8210485994729219421, guid: edb33372aa93f3040bbb42f6ac0d0137,
         type: 3}
       propertyPath: SpawnPoint

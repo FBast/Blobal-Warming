@@ -59,18 +59,34 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: {fileID: 0}
     Variable: {fileID: 11400000, guid: 30cb74e9820f233408736b98b27e00dd, type: 2}
+  PlayerAIsActive:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: b3210c2ad186ef34398c182bcbef76b6, type: 2}
   PlayerBGameObject:
     UseConstant: 0
     ConstantValue: {fileID: 0}
     Variable: {fileID: 11400000, guid: 182c5f21bdb95c2478984a61e236196d, type: 2}
+  PlayerBIsActive:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 2e450b80771d6ef4fae2cb7584c0931f, type: 2}
   PlayerCGameObject:
     UseConstant: 0
     ConstantValue: {fileID: 0}
     Variable: {fileID: 11400000, guid: 90031fc01a14f1b4d86b959413ee1685, type: 2}
+  PlayerCIsActive:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: a96f00cac362e214bb76d38633d72a68, type: 2}
   PlayerDGameObject:
     UseConstant: 0
     ConstantValue: {fileID: 0}
     Variable: {fileID: 11400000, guid: e98b713af69ff86499bcc89c8a7d3fd8, type: 2}
+  PlayerDIsActive:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: c1eb5727c8fa3874f9562e8c8b4d11ec, type: 2}
   LevelScrollingSpeed:
     UseConstant: 0
     ConstantValue: 0

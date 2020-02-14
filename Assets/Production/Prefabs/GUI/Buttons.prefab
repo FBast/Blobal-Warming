@@ -169,6 +169,9 @@ GameObject:
   - component: {fileID: 3544862918823783060}
   - component: {fileID: 6595677407242296613}
   - component: {fileID: 8796038644879034725}
+  - component: {fileID: 713613966177240867}
+  - component: {fileID: 1794350724388613640}
+  - component: {fileID: 5592513864469024052}
   m_Layer: 5
   m_Name: Quitter
   m_TagString: Untagged
@@ -310,6 +313,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: 1
+  Controller: 1
+--- !u!114 &713613966177240867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3346894895864061246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7394abedc7b46ad82311a390f873908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 1
+  Controller: 2
+--- !u!114 &1794350724388613640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3346894895864061246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7394abedc7b46ad82311a390f873908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 1
+  Controller: 3
+--- !u!114 &5592513864469024052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3346894895864061246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7394abedc7b46ad82311a390f873908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 1
+  Controller: 4
 --- !u!1 &3404469397496694816
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +753,7 @@ Animator:
   m_GameObject: {fileID: 6308879867488411373}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 394509cf52b18164899b0abf59fc4400, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -885,6 +931,9 @@ GameObject:
   - component: {fileID: 7528979797840799694}
   - component: {fileID: 5697190847928722572}
   - component: {fileID: 163329257535071161}
+  - component: {fileID: 797807593219106520}
+  - component: {fileID: 2726687269291121875}
+  - component: {fileID: 2842754883745206330}
   m_Layer: 5
   m_Name: Jouer
   m_TagString: Untagged
@@ -1015,6 +1064,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: 0
+  Controller: 1
+--- !u!114 &797807593219106520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6857806484615263227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7394abedc7b46ad82311a390f873908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 0
+  Controller: 2
+--- !u!114 &2726687269291121875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6857806484615263227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7394abedc7b46ad82311a390f873908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 0
+  Controller: 3
+--- !u!114 &2842754883745206330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6857806484615263227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7394abedc7b46ad82311a390f873908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 0
+  Controller: 4
 --- !u!1 &7294208891151209370
 GameObject:
   m_ObjectHideFlags: 0
