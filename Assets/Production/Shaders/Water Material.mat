@@ -27,22 +27,22 @@ Material:
     - Vector1_95FD5574: 2
     - Vector1_BFC44D2C: 0.5
     - _Alpha: 0.95
-    - _AlphaEdge: 0.12
-    - _BubbleRing: -2.19
-    - _BubbleSpread: 0.419
-    - _BubbleTimeMultiplier: 1
-    - _NormalStrength: 0.5
+    - _AlphaEdge: 1
+    - _BubbleRing: -3.5
+    - _BubbleSpread: 0.45
+    - _BubbleTimeMultiplier: 0.5
+    - _NormalStrength: 0.75
     - _Opacity: 1
     - _Petroleum: 0
     - _PlayerSize: 0
-    - _Shape: 0.205
+    - _Shape: 0.1
     - _Smoothness: 1
-    - _TimeMultiplier: 0.1
-    - _WaveScale: 0.1
+    - _TimeMultiplier: 0.041
+    - _WaveScale: 0.064
     m_Colors:
-    - _BubbleColor: {r: 0.09531861, g: 0.20636792, b: 0.3962264, a: 0}
-    - _Color1: {r: 0.2783019, g: 0.4463163, b: 1, a: 0}
-    - _Color2: {r: 0.013216452, g: 0.033699114, b: 0.084905684, a: 0}
-    - _Offset: {r: 0, g: -2.3, b: 0, a: 0}
+    - _BubbleColor: {r: 0.050329305, g: 0.13405016, b: 0.2735849, a: 0}
+    - _Color1: {r: 0.118592024, g: 0.24747425, b: 0.6132076, a: 1}
+    - _Color2: {r: 0.017132431, g: 0.044604015, b: 0.103773594, a: 0}
+    - _Offset: {r: 0, g: -3.42, b: 0, a: 0}
     - _Player1Position: {r: 0.5, g: 0.4, b: 0, a: 0}
-    - _Tiling: {r: 3, g: 3, b: 0, a: 0}
+    - _Tiling: {r: 4, g: 4, b: 0, a: 0}

@@ -210,7 +210,7 @@ namespace Production.Scripts.Components
 					Debug.Log("Wall " + wall + " lastWall " + lastWall);
 					if (wall != null && wall != lastWall || wall != null && lastWall == null)
 					{
-						
+						Debug.Log("Wall Jump at force : " + m_JumpForce + " mass " + m_Rigidbody2D.mass);
 						canDash = true;
 						if (wall.position.x < transform.position.x)
 						{
@@ -240,6 +240,7 @@ namespace Production.Scripts.Components
 			{
 				if (m_Grounded && DoubleJumpReference.Value == false)
 				{
+					Debug.Log("jump and dash no dJump");
 					sound.Play("JumpFx");
 					// Add a vertical force to the player.
 					m_Grounded = false;
@@ -251,7 +252,7 @@ namespace Production.Scripts.Components
 
 				if (!m_Grounded && DoubleJumpReference.Value && canDoubleJump)
 				{
-					Debug.Log("DoubleJump");
+					Debug.Log("jump and dash and dJump");
 					sound.Play("JumpFx");
 					m_Grounded = false;
 					canDoubleJump = false;
@@ -266,55 +267,56 @@ namespace Production.Scripts.Components
 				animator.SetBool("Jumping", false);
 				}
 			}
-			if (m_Grounded && jump && DoubleJumpReference.Value==false && !dash)
-			{
-				Debug.Log("Jump");
-				sound.Play("JumpFx");
-				// Add a vertical force to the player.
-				m_Grounded = false;
-				m_Rigidbody2D.velocity = Vector2.zero;
-				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-				animator.SetBool("Jumping", true);
-				animator.SetBool("Walking", false);
-			}
 
+			if (!dash)
+			{
+				if (m_Grounded && jump && DoubleJumpReference.Value==false)// && !dash)
+				{
+					sound.Play("JumpFx");
+					// Add a vertical force to the player.
+					m_Grounded = false;
+					m_Rigidbody2D.velocity = Vector2.zero;
+					m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+					animator.SetBool("Jumping", true);
+					animator.SetBool("Walking", false);
+				}
+	
+				else
+				{ 
+					animator.SetBool("Jumping", false);
+				}
+
+				if (DoubleJumpReference.Value)// && !dash)
+				{
+					if (!m_Grounded && jump && canDoubleJump)
+					{
+						sound.Play("JumpFx");
+						m_Grounded = false;
+						canDoubleJump = false;
+						m_Rigidbody2D.velocity = Vector2.zero;
+						m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+						animator.SetBool("Jumping", true);
+						animator.SetBool("Walking", false);
+
+					}
+					if (m_Grounded && jump)
+					{
+						sound.Play("JumpFx");
+						m_Rigidbody2D.velocity = Vector2.zero;
+						m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+						m_Grounded = false;
+						animator.SetBool("Jumping", true);
+						animator.SetBool("Walking", false);
+					}
+
+					else{
+						animator.SetBool("Jumping", false);
+					}
+				}
+			}
 			
-				else{
-				animator.SetBool("Jumping", false);
-				}
-
-			if (DoubleJumpReference.Value && !dash)
-			{
-				if (!m_Grounded && jump && canDoubleJump)
-				{
-					Debug.Log("DoubleJump");
-					sound.Play("JumpFx");
-					m_Grounded = false;
-					canDoubleJump = false;
-					m_Rigidbody2D.velocity = Vector2.zero;
-					m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-					animator.SetBool("Jumping", true);
-					animator.SetBool("Walking", false);
-
-				}
-				if (m_Grounded && jump)
-				{
-					Debug.Log("Jump");
-					sound.Play("JumpFx");
-					m_Rigidbody2D.velocity = Vector2.zero;
-					m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-					m_Grounded = false;
-					animator.SetBool("Jumping", true);
-					animator.SetBool("Walking", false);
-				}
-
-				else{
-				animator.SetBool("Jumping", false);
-				}
-			}
 			if (!jump && canDash && dash && DashActiveReference.Value)
 			{
-				Debug.Log("Dash");
 				sound.Play("DashFx");
 				m_Rigidbody2D.velocity = Vector2.zero;
 				Vector2 dashDir = new Vector2(dashX, dashY);

@@ -2,6 +2,7 @@
 using System.Linq;
 using Production.Plugins.RyanScriptableObjects.SOEvents.IntEvents;
 using Production.Plugins.RyanScriptableObjects.SOEvents.StringEvents;
+using Production.Plugins.RyanScriptableObjects.SOEvents.VoidEvents;
 using Production.Plugins.RyanScriptableObjects.SOReferences.BoolReference;
 using Production.Plugins.RyanScriptableObjects.SOReferences.FloatReference;
 using Production.Plugins.RyanScriptableObjects.SOReferences.GameObjectReference;
@@ -26,9 +27,11 @@ namespace Production.Scripts.Entities {
         public FloatReference MovementSpeedBaseValue;
         public FloatReference ControllerDirection;
         public BoolReference IsLevelScrolling;
+        public FloatReference LevelScrollingSpeed;
 
         [Header("Score Management")] 
         public IntEvent DisplayScore;
+        public VoidEvent HideOverlay;
         public List<FloatReference> ScoreReference = new List<FloatReference>();
         public ScoreData _scoreData;
     
@@ -58,14 +61,13 @@ namespace Production.Scripts.Entities {
         private void InitializeScoreList()
         {
             for(int i =0; i < PlayersEntities.Count; i++){ //ACTIVE PLAYERS ONLY
-                if (ScoreReference[i].Value > 0)
-                {
-                    ScoreDataEntry newEntry = new ScoreDataEntry();
+                ScoreDataEntry newEntry = new ScoreDataEntry();
                     newEntry.PlayerName = PlayersEntities[i].Name.Value;
+                    Debug.Log("Save score : " + PlayersEntities[i].name);
                     newEntry.Score = PlayersEntities[i].playerScore.Value;
                     newEntry.PlayerID = PlayersEntities[i].GetComponent<BonusHandlerComponent>().PlayerID;
                     _scoreData.ScoreList.Add(newEntry);
-                }
+                
             }
             _scoreData.PlayerNumberInLastGame = PlayersEntities.Count;
             _scoreData.Display();
@@ -83,6 +85,7 @@ namespace Production.Scripts.Entities {
             Endtime.Value = StartingTime;
             SpawnActive.Value = true;
             HasGameStarted.Value = false;
+            LevelScrollingSpeed.Value = 0.02f;
             IsLevelScrolling.Value = false;
             foreach (var mS in MovementSpeed)
             {
@@ -109,8 +112,7 @@ namespace Production.Scripts.Entities {
                     InitializeScoreList();
                     CurrentTime.Value = StartingTime;
                     DisplayScore.Raise(PlayersEntities.Count);
-                    OnLoadScene.Raise(MenuScene);
-                    OnUnloadScene.Raise(GameScene);
+                    HideOverlay.Raise();
                 } 
             }
         }

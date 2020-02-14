@@ -6,19 +6,19 @@ namespace Production.Scripts.Entities {
     public class SceneEntity : MonoBehaviour {
 
         public string StartingSceneName;
-    
+
         private void Start() {
             LoadScene(StartingSceneName);
         }
 
         public void UnloadScene(string scene) {
-            if (!UnityEngine.SceneManagement.SceneManager.GetSceneByName(scene).isLoaded) return;
+            if (!SceneManager.GetSceneByName(scene).isLoaded) return;
             Debug.Log("Unloading " + scene + "...");
             StartCoroutine(UnloadSceneAsync(scene));
         }
 		
         public void LoadScene(string scene) {
-            if (UnityEngine.SceneManagement.SceneManager.GetSceneByName(scene).isLoaded) return;
+            if (SceneManager.GetSceneByName(scene).isLoaded) return;
             Debug.Log("Loading " + scene + "...");
             StartCoroutine(LoadSceneAsync(scene));
         }
@@ -38,16 +38,16 @@ namespace Production.Scripts.Entities {
         }
 		
         private IEnumerator UnloadSceneAsync(string scene) {
-            AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(scene);
+            AsyncOperation asyncUnload = SceneManager.UnloadSceneAsync(scene);
             //Wait until the last operation fully loads to return anything
-            while (!asyncLoad.isDone) {
+            while (!asyncUnload.isDone) {
                 yield return null;
             }
             Debug.Log(scene + " unloaded !");
         }
 
         private IEnumerator LoadSceneAsync(string scene) {
-            AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
             //Wait until the last operation fully loads to return anything
             while (!asyncLoad.isDone) {
                 yield return null;

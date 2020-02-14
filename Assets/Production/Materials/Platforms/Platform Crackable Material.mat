@@ -86,7 +86,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PlatformMask:
-        m_Texture: {fileID: 2800000, guid: 75d1b277df26f1945a01fe06db30df5b, type: 3}
+        m_Texture: {fileID: 2800000, guid: d7ba66227b6899d41a0c06e7925d35c4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PlatformTexture:
@@ -113,6 +113,9 @@ Material:
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
+    - _Detail: 0
+    - _DetailDepth: 2
+    - _DetailMerge: 0.5
     - _DetailScale: 0
     - _DstBlend: 0
     - _EdgeDetail: 0.519

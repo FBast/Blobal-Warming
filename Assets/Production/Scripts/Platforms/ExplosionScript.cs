@@ -7,7 +7,7 @@ namespace Production.Scripts.Platforms
         void OnTriggerStay2D(Collider2D other){
             if (other.gameObject.transform.parent.CompareTag("Player"))
             {
-                Debug.Log("Kill the player, erase this line when it works");
+                //Debug.Log("Kill the player, erase this line when it works");
                 //Destroy(other.gameObject.transform.parent.gameObject);
             }
         

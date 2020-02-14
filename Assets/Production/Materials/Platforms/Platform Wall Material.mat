@@ -113,6 +113,9 @@ Material:
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
+    - _Detail: 0
+    - _DetailDepth: 2
+    - _DetailMerge: 0.5
     - _DetailScale: 8.19
     - _DstBlend: 0
     - _EdgeDetail: 0.496
@@ -124,7 +127,7 @@ Material:
     - _NormalStrength: 2
     - _OcclusionStrength: 1
     - _Opacity: 1
-    - _OverlayBias: 0.8
+    - _OverlayBias: 0.685
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5

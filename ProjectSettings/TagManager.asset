@@ -28,7 +28,7 @@ TagManager:
   - Shield
   - Player
   - Ball
-  - 
+  - Item
   - 
   - 
   - 
@@ -62,8 +62,14 @@ TagManager:
   - name: Platform
     uniqueID: 1783680005
     locked: 0
+  - name: Item
+    uniqueID: 533934415
+    locked: 0
   - name: Actor
     uniqueID: 2341731059
+    locked: 0
+  - name: Wind
+    uniqueID: 1743409695
     locked: 0
   - name: Water
     uniqueID: 1184116449
