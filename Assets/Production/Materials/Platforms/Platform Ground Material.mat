@@ -115,7 +115,7 @@ Material:
     - _Cutoff: 0.5
     - _Detail: 0
     - _DetailDepth: 3.41
-    - _DetailMerge: 0.598
+    - _DetailMerge: 0.577
     - _DetailScale: 10
     - _DstBlend: 0
     - _EdgeDetail: 0.15
@@ -124,7 +124,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _NormalStrength: 1.5
+    - _NormalStrength: 1.718
     - _OcclusionStrength: 1
     - _Opacity: 1
     - _OverlayBias: 0

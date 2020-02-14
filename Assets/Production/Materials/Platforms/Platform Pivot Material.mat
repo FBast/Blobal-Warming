@@ -86,7 +86,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PlatformMask:
-        m_Texture: {fileID: 2800000, guid: ee35ee5dbbbcdcc449e92f17befc2055, type: 3}
+        m_Texture: {fileID: 2800000, guid: d7ba66227b6899d41a0c06e7925d35c4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PlatformTexture:
@@ -108,7 +108,7 @@ Material:
     - Vector1_B29ABE99: 0
     - Vector1_E2436A9B: 10
     - _AlphaClip: 0
-    - _AlphaClipping: 0.8
+    - _AlphaClipping: 0.927
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
@@ -116,9 +116,9 @@ Material:
     - _Detail: 1
     - _DetailDepth: 10
     - _DetailMerge: 0.5
-    - _DetailScale: 3.1
+    - _DetailScale: 10
     - _DstBlend: 0
-    - _EdgeDetail: 0.586
+    - _EdgeDetail: 0.373
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -127,7 +127,7 @@ Material:
     - _NormalStrength: 2
     - _OcclusionStrength: 1
     - _Opacity: 1
-    - _OverlayBias: 0.153
+    - _OverlayBias: 0.018
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -135,9 +135,9 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TextureContrast: 10
+    - _TextureContrast: 2.23
     - _TopBlend: 1
-    - _TopHardness: 0.9
+    - _TopHardness: 0.877
     - _TopSharpness: 0.5
     - _Top_Sharpness: 0.5
     - _WorkflowMode: 1
