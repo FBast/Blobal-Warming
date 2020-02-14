@@ -5,61 +5,44 @@ namespace Production.Scripts.Platforms
 {
     public class CrakeblePlateform : MonoBehaviour
     {
-        public int PlateformHp = 4;
-        public GameObject childCube;
-        public AudioClip crackingSound;
-        public AudioClip destroySound;
-        private bool IsBeingSteppedOn;
+        public float TimerBeforeCrack = 3f;
+        public float TimerBeforeDestruct = 1f;
+        public GameObject RockFallingParticle;
+        private AudioSource crackingSound;
 
+        private bool _hasBeenSteppedOn;
 
+        private bool _isDead;
+        //public int PlateformHp = 4;
+        //public GameObject childCube;
+        //private bool IsBeingSteppedOn;
 
-        /*private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("Touche");
-        childCube.GetComponent<MeshRenderer>().material.color = Color.red;
-        PlateformHp--;
-        if (PlateformHp == 0)
+        private void Start()
         {
-            Destroy(this.gameObject);
+            _hasBeenSteppedOn = false;
+            crackingSound = GetComponent<AudioSource>();
         }
-    }*/
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (!IsBeingSteppedOn)
-            {
-                PlateformHp--;
-                Debug.Log("Touché ! HP = " + PlateformHp);
-
-                if (crackingSound != null)
-                {
-                    AudioSource.PlayClipAtPoint(crackingSound, transform.position);
-                }
-
-
-                if (PlateformHp == 1)
-                {
-                    //childCube.GetComponent<MeshRenderer>().material.color = Color.red;
-                    //Change material parameter for fissure
-                }
-                if (PlateformHp == 0)
-                {
-                    if (destroySound != null)
-                    {
-                        AudioSource.PlayClipAtPoint(destroySound, transform.position);
-                    }
-                    Destroy(this.gameObject);
-                }
-            }
-            IsBeingSteppedOn = true;
+            _hasBeenSteppedOn = true;
         }
 
-        private void OnCollisionExit2D(Collision2D other)
+        private void Update()
         {
-            IsBeingSteppedOn = false;
+            if (_hasBeenSteppedOn)
+            {
+                TimerBeforeCrack -= Time.deltaTime;
+            }
+            if (TimerBeforeCrack <= 0)
+            {
+                TimerBeforeDestruct -= Time.deltaTime;
+            }
+            if (TimerBeforeDestruct <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
+        
     }
-    
-    
-    
 }

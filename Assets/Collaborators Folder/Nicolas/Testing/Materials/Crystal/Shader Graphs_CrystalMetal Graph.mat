@@ -10,7 +10,7 @@ Material:
   m_Name: Shader Graphs_CrystalMetal Graph
   m_Shader: {fileID: -6465566751694194690, guid: 5c8d7d94188395d4794f6696fb6f8a99,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Branch Shader
+  m_Shader: {fileID: -6465566751694194690, guid: 5531a81006d669342a7e626d356ce241,
+    type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: 27bebe89b1f5d8f4ab3d1b785e751208, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_E6E44C92: 1
+    - _AlphaEdge: 0.96
+    - _AlphaSmoothness: 0.078
+    - _ColorTransition: 0.11
+    - _DetailScale: 8.51
+    - _Flip: 0
+    - _LeftEdge: 0.47
+    - _NormalStrength: 1
+    - _RightEdge: 0
+    - _Transition: 0.686
+    - _TransitionOffset: 0.05
+    m_Colors:
+    - Color_B5A9F58E: {r: 2.6701567, g: 1.8137475, b: 0.79348993, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}

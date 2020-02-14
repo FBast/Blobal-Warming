@@ -11,18 +11,18 @@ namespace Production.Scripts.Platforms {
 
         [Header("Internal References")]
         public List<GameObject> CurrentPlatforms = new List<GameObject>();
+        public Transform PlatformSpawn;
         
         [Header("SO References")] 
         public FloatReference CurrentTimeReference; //Recupère depuis un SO le temps actuel
         public FloatReference EndTimeReference; //Recupère depuis un SO le temps actuel
+        public FloatReference LevelScrollingSpeed;
         public BoolReference IsScrolling;
 
         [Header("Parameters")]
-        public float SpeedBase;
         public float SpawnRateMultiplicator;
         public int PlateformMinNumber; //Minimum de plateformes qui peuvent spawn sur une ligne
         public int PlateformMaxNumber; //Maximum de plateformes qui peuvent spawn sur une ligne
-        public float ScrollingSpeed; //vitesse à laquelle il tombe, s'actualise dans Update
 
         [Header("Prefabs")]
         public List<GameObject> PatternPrefabs4PF4L;
@@ -42,33 +42,26 @@ namespace Production.Scripts.Platforms {
         private float _timeSinceLastSpawn = 3;
         private float _spawnRate; // nb de secondes au bout du quel les plateformes sont instanciées
         private int _plateformNumberOffset;
-        private float _plateformDifficulty;
 
         private float _realTime => EndTimeReference.Value - CurrentTimeReference.Value;
 
         private void Start()
         {
             _use4Lines = true;
-            //Invoke("ScrollStartField", 3f);
-        }
-
-        private void ScrollStartField()
-        {
-            CurrentPlatforms.Add(StartFieldPrefab);
         }
 
         private void Update() {
             if(!IsScrolling.Value) return;
             //Produit en croix : speed = (temps actuel * max speed possible / fin du temps * un multiplicateur de sécurité ) + strict minimum possible 
 
-            _spawnRate =  SpeedBase / ScrollingSpeed * SpawnRateMultiplicator;
+            _spawnRate =  SpawnRateMultiplicator / LevelScrollingSpeed.Value;
             //pareil mais avec le spawn rate
         
             _plateformNumberOffset = Mathf.RoundToInt((PlateformMaxNumber - PlateformMinNumber) / EndTimeReference.Value * (EndTimeReference.Value - _realTime) + PlateformMinNumber);
             
             //Scroll des plateformes
             foreach (GameObject platform in CurrentPlatforms) {
-                platform.transform.position -= transform.up * ScrollingSpeed;
+                platform.transform.position -= transform.up * LevelScrollingSpeed.Value;
             }
     
             //Instantiation des plateformes
@@ -81,7 +74,7 @@ namespace Production.Scripts.Platforms {
     
         private void InstantiatePlateform() {
 
-            _nbOfPlatformsToSpawn = Mathf.Clamp(Random.Range(-3, 3) + _plateformNumberOffset, PlateformMinNumber, PlateformMaxNumber);
+            _nbOfPlatformsToSpawn = Mathf.Clamp(Random.Range(-2, 3) + _plateformNumberOffset, PlateformMinNumber, PlateformMaxNumber);
             //détermine le nb de plateformes à faire spawn, clamp entre 1 et 4
             //tweeck les valeurs du random range pour augmenter ou diminuer la difficulté du jeu, + ou - de plateformes qui spawn a la fin
 
@@ -89,19 +82,19 @@ namespace Production.Scripts.Platforms {
             {
                 switch (_nbOfPlatformsToSpawn) {
                     case 4:
-                        _newPattern = Instantiate(PatternPrefabs4PF4L[Random.Range(0, PatternPrefabs4PF4L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs4PF4L[Random.Range(0, PatternPrefabs4PF4L.Count)], PlatformSpawn);
                         break;
             
                     case 3:                
-                        _newPattern = Instantiate(PatternPrefabs3PF4L[Random.Range(0, PatternPrefabs3PF4L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs3PF4L[Random.Range(0, PatternPrefabs3PF4L.Count)], PlatformSpawn);
                         break; 
             
                     case 2:
-                        _newPattern = Instantiate(PatternPrefabs2PF4L[Random.Range(0, PatternPrefabs2PF4L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs2PF4L[Random.Range(0, PatternPrefabs2PF4L.Count)], PlatformSpawn);
                         break;
             
                     case 1 :
-                        _newPattern = Instantiate(PatternPrefabs1PF4L[Random.Range(0, PatternPrefabs1PF4L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs1PF4L[Random.Range(0, PatternPrefabs1PF4L.Count)], PlatformSpawn);
                         break;
             
                     default: 
@@ -111,24 +104,24 @@ namespace Production.Scripts.Platforms {
 
                 _use4Lines = false;
             }
-            else 
+            else if(!_use4Lines)
             {
                 switch (_nbOfPlatformsToSpawn) {
            
                     case 3:                
-                        _newPattern = Instantiate(PatternPrefabs3PF3L[Random.Range(0, PatternPrefabs3PF3L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs3PF3L[Random.Range(0, PatternPrefabs3PF3L.Count)], PlatformSpawn);
                         break; 
             
                     case 2:
-                        _newPattern = Instantiate(PatternPrefabs2PF3L[Random.Range(0, PatternPrefabs2PF3L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs2PF3L[Random.Range(0, PatternPrefabs2PF3L.Count)], PlatformSpawn);
                         break;
             
                     case 1 :
-                        _newPattern = Instantiate(PatternPrefabs1PF3L[Random.Range(0, PatternPrefabs1PF3L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs1PF3L[Random.Range(0, PatternPrefabs1PF3L.Count)], PlatformSpawn);
                         break;
             
                     default: 
-                        _newPattern = Instantiate(PatternPrefabs3PF3L[Random.Range(0, PatternPrefabs3PF3L.Count)], transform);
+                        _newPattern = Instantiate(PatternPrefabs3PF3L[Random.Range(0, PatternPrefabs3PF3L.Count)], PlatformSpawn);
                         break; 
                 }
                 _use4Lines = true;
