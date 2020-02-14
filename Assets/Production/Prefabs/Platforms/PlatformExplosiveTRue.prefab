@@ -80,9 +80,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionParticules: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
   ExplosionRangeCollision: {fileID: 1349044785442457634}
-  sc: {fileID: 0}
   timerAfterHit: 2
-  timerExplosionTime: 2
+  timerExplosionTime: 1
 --- !u!114 &1149522271515608173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,9 +95,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sounds:
-  - name: ExposionSound
+  - name: ExplosionSound
     clip: {fileID: 8300000, guid: 181008542edfaa44f829ec3eaef47804, type: 3}
-    Volume: 0.5
+    Volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: CountdownSound
+    clip: {fileID: 8300000, guid: 11d88b258ef5c3f4f81e1e2fdf709cec, type: 3}
+    Volume: 1
     pitch: 1
     source: {fileID: 0}
 --- !u!61 &58115088
