@@ -21,9 +21,13 @@ namespace Production.Scripts.Events {
         [Header("SO Reference")]
         public FloatReference PlayerMouvement;
         public GameObjectReference PlayerAGameObject;
+        public BoolReference PlayerAIsActive;
         public GameObjectReference PlayerBGameObject;
+        public BoolReference PlayerBIsActive;
         public GameObjectReference PlayerCGameObject;
+        public BoolReference PlayerCIsActive;
         public GameObjectReference PlayerDGameObject;
+        public BoolReference PlayerDIsActive;
         public FloatReference LevelScrollingSpeed;
         public BoolReference IsLevelScrolling;
         public BoolReference SpawnActive;
@@ -89,11 +93,10 @@ namespace Production.Scripts.Events {
                 LeftWindEffect.SetActive(false);
                 _updateAction = null;
             }, delegate {
-                PlayerAGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
-                PlayerBGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
-                PlayerCGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
-                PlayerDGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
-                Debug.Log("Wind : " + windEffect.x + " " + windEffect.y + " " + windEffect.z);
+                if (PlayerAIsActive.Value) PlayerAGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
+                if (PlayerBIsActive.Value) PlayerBGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
+                if (PlayerCIsActive.Value) PlayerCGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
+                if (PlayerDIsActive.Value) PlayerDGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
             });
             LeftWindEffect.SetActive(direction > 0);
             RightWindEffect.SetActive(direction < 0);
