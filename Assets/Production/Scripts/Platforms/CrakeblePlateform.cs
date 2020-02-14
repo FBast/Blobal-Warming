@@ -34,64 +34,15 @@ namespace Production.Scripts.Platforms
             {
                 TimerBeforeCrack -= Time.deltaTime;
             }
-
             if (TimerBeforeCrack <= 0)
             {
-                Instantiate(RockFallingParticle, transform);
-                crackingSound.PlayOneShot(crackingSound.clip);
                 TimerBeforeDestruct -= Time.deltaTime;
             }
-
             if (TimerBeforeDestruct <= 0)
             {
                 Destroy(gameObject);
             }
         }
-
-
-        /*private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("Touche");
-        childCube.GetComponent<MeshRenderer>().material.color = Color.red;
-        PlateformHp--;
-        if (PlateformHp == 0)
-        {
-            Destroy(this.gameObject);
-        }
-    }*/
-
-        /*private void OnCollisionEnter2D(Collision2D other)
-        {
-            if (!IsBeingSteppedOn)
-            {
-                PlateformHp--;
-                Debug.Log("Touché ! HP = " + PlateformHp);
-
-
-
-                if (PlateformHp == 1)
-                {
-                    //childCube.GetComponent<MeshRenderer>().material.color = Color.red;
-                    //Change material parameter for fissure
-                }
-                if (PlateformHp == 0)
-                {
-                    if (destroySound != null)
-                    {
-                        AudioSource.PlayClipAtPoint(destroySound, transform.position);
-                    }
-                    Destroy(this.gameObject);
-                }
-            }
-            IsBeingSteppedOn = true;
-        }
-
-        private void OnCollisionExit2D(Collision2D other)
-        {
-            IsBeingSteppedOn = false;
-        }*/
+        
     }
-    
-    
-    
 }

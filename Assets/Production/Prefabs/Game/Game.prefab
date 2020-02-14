@@ -133,7 +133,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: bbfbf85847b970549a94e4d6d3513dba, type: 2}
-  StartingTime: 180
+  StartingTime: 10
   OnLoadScene: {fileID: 11400000, guid: 48abf74f863cbfb4f98c5ccb5649a0f6, type: 2}
   OnUnloadScene: {fileID: 11400000, guid: 406d2d59a7a1bd84ba206a5bfad5c112, type: 2}
   MenuScene: Menu
