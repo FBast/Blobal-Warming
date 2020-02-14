@@ -7,7 +7,7 @@ namespace Production.Scripts.Platforms
     {
         public float TimerBeforeCrack = 3f;
         public float TimerBeforeDestruct = 1f;
-        public GameObject RockFallingParticle;
+        public Animator anim;
         private SoundComponent crackingSound;
 
         private bool _hasBeenSteppedOn;
@@ -17,6 +17,7 @@ namespace Production.Scripts.Platforms
         {
             _hasBeenSteppedOn = false;
             crackingSound = GetComponent<SoundComponent>();
+            anim = GetComponentInChildren<Animator>();
         }
 
         private void OnCollisionEnter2D(Collision2D other)
@@ -36,6 +37,7 @@ namespace Production.Scripts.Platforms
         private void PlayDestroyFeedback()
         {
             crackingSound.Play("DestroySound");
+            anim.SetTrigger("Crack");
             _isDead = true;
         }
 

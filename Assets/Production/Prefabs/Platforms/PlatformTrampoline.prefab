@@ -92,5 +92,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformTrampoline
       objectReference: {fileID: 0}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 652c96ac58dd13d4b9ee0a2107f535af, type: 3}
+    - target: {fileID: 8528042066427191606, guid: 118c92e36f325e942b0aeff34381d894,
+        type: 3}
+      propertyPath: _sounds.Array.data[0].Volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 118c92e36f325e942b0aeff34381d894, type: 3}
