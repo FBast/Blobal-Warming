@@ -6,6 +6,7 @@ namespace Production.Scripts.Components
     {
         public Rigidbody2D rigidBody;
         [SerializeField] private float ballLaunchSpeed;
+        private SoundComponent sc;
 
         void Start()
         {
@@ -14,11 +15,13 @@ namespace Production.Scripts.Components
             diagonalDirection.x = diagonalDirection.x >= 0 ? 1 : -1;
             diagonalDirection.y = diagonalDirection.y >= 0 ? 1 : -1;
             rigidBody.AddForce(diagonalDirection * ballLaunchSpeed, ForceMode2D.Impulse);
+            sc = GetComponent<SoundComponent>();
 
         }
 
         void OnCollisionEnter2D(Collision2D col)
         {
+            sc.Play("Bounce");
             if(col.gameObject.layer == 9)
             {
                 Destroy(this.gameObject);

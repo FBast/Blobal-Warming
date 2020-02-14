@@ -52,6 +52,7 @@ namespace Production.Scripts.Entities {
             while (!asyncLoad.isDone) {
                 yield return null;
             }
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(scene));
             Debug.Log(scene + " loaded !");
         }
 

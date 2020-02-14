@@ -7,25 +7,38 @@ namespace Production.Scripts.Platforms
     {
         public float TimerBeforeCrack = 3f;
         public float TimerBeforeDestruct = 1f;
-        public GameObject RockFallingParticle;
-        private AudioSource crackingSound;
+        public Animator anim;
+        private SoundComponent crackingSound;
 
         private bool _hasBeenSteppedOn;
-
         private bool _isDead;
-        //public int PlateformHp = 4;
-        //public GameObject childCube;
-        //private bool IsBeingSteppedOn;
 
         private void Start()
         {
             _hasBeenSteppedOn = false;
-            crackingSound = GetComponent<AudioSource>();
+            crackingSound = GetComponent<SoundComponent>();
+            anim = GetComponentInChildren<Animator>();
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
+            if (!_hasBeenSteppedOn)
+            {
+                PlaySteppedFeedback();
+            }
             _hasBeenSteppedOn = true;
+        }
+        
+        private void PlaySteppedFeedback()
+        {
+            crackingSound.Play("Stepped");
+        }
+
+        private void PlayDestroyFeedback()
+        {
+            crackingSound.Play("DestroySound");
+            anim.SetTrigger("Crack");
+            _isDead = true;
         }
 
         private void Update()
@@ -37,6 +50,10 @@ namespace Production.Scripts.Platforms
             if (TimerBeforeCrack <= 0)
             {
                 TimerBeforeDestruct -= Time.deltaTime;
+                if (!_isDead)
+                {
+                    PlayDestroyFeedback();
+                }
             }
             if (TimerBeforeDestruct <= 0)
             {

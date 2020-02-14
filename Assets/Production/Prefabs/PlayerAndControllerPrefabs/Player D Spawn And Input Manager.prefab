@@ -5220,6 +5220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDead: {fileID: 11400000, guid: dad81ade09baa174192eb454164596a5, type: 2}
+  PlayerDeathPrefab: {fileID: 8040570085585490070, guid: da545ce88f28f1241ad2ee7765891b2f,
+    type: 3}
   CurrentHP: 0
   BumpForce: 5
   ShieldActive:

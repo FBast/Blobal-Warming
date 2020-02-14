@@ -21,6 +21,7 @@
             <e p="GroundScript.cs" t="Include" />
           </e>
         </e>
+        <e p="LandingSound.cs" t="Include" />
         <e p="Production" t="Include">
           <e p="Editor" t="Include">
             <e p="ReferenceDrawer.cs" t="Include" />

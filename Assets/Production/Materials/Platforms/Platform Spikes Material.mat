@@ -108,17 +108,17 @@ Material:
     - Vector1_B29ABE99: 0
     - Vector1_E2436A9B: 10
     - _AlphaClip: 0
-    - _AlphaClipping: 0.8
+    - _AlphaClipping: 0.418
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _Detail: 1
-    - _DetailDepth: 4.25
-    - _DetailMerge: 0.5
-    - _DetailScale: 8.19
+    - _DetailDepth: 2.5
+    - _DetailMerge: 0.764
+    - _DetailScale: 10
     - _DstBlend: 0
-    - _EdgeDetail: 0.496
+    - _EdgeDetail: 0.228
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -126,8 +126,8 @@ Material:
     - _Metallic: 0
     - _NormalStrength: 2
     - _OcclusionStrength: 1
-    - _Opacity: 1
-    - _OverlayBias: 0.153
+    - _Opacity: 0.473
+    - _OverlayBias: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -137,23 +137,23 @@ Material:
     - _Surface: 0
     - _TextureContrast: 10
     - _TopBlend: 1
-    - _TopHardness: 0.9
+    - _TopHardness: 0.923
     - _TopSharpness: 0.5
     - _Top_Sharpness: 0.5
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - Color_D142E153: {r: 0.9339623, g: 0.04846031, b: 0.04846031, a: 0}
-    - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _BaseColor: {r: 2, g: 1.0931524, b: 0.6886792, a: 1}
     - _BaseOffset: {r: 5.97, g: 0, b: 0, a: 0}
-    - _BaseTiling: {r: 4.34, g: 2.37, b: 0, a: 0}
+    - _BaseTiling: {r: 2, g: 2, b: 0, a: 0}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _DetailColor: {r: 15.999998, g: 4.3560205, b: 0, a: 0}
+    - _DetailColor: {r: 31.999996, g: 8.712041, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShapeOffset: {r: 0, g: 0, b: 0, a: 0}
     - _ShapeTiling: {r: 1, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _TopColor: {r: 0.21698111, g: 0.08307036, b: 0.029681385, a: 0}
+    - _TopColor: {r: 0.38679248, g: 0.12942253, b: 0.031016383, a: 0}
     - _TopMinMax: {r: -0.71, g: 1.26, b: 0, a: 0}
     - _TopOffset: {r: 0, g: 0, b: 0, a: 0}
     - _TopTiling: {r: 2, g: 3, b: 0, a: 0}

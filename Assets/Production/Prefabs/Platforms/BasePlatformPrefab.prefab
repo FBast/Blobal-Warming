@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 3379046651387018416}
   - component: {fileID: 4359952583375180342}
   - component: {fileID: 5225262800117339248}
+  - component: {fileID: 8528042066427191606}
   m_Layer: 8
   m_Name: BasePlatformPrefab
   m_TagString: Untagged
@@ -236,6 +237,24 @@ MonoBehaviour:
   - {fileID: 2064382026135018287}
   - {fileID: 5339236461228748810}
   ChanceApparitionItem: 40
+--- !u!114 &8528042066427191606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6930691156639378056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0915651b300adb4c959050c280b32d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sounds:
+  - name: Land
+    clip: {fileID: 8300000, guid: 4c44b3baa072d9047ad3c262d3f13838, type: 3}
+    Volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
 --- !u!1 &8715261442775398294
 GameObject:
   m_ObjectHideFlags: 0
