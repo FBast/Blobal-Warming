@@ -11,6 +11,7 @@ namespace Production.Scripts.Events {
 
         [Header("Parameters")] 
         public float WindForce;
+        public float SpeedMultiplicator;
 
         [Header("Internal References")] 
         public Animator DeathLimitAnimator;
@@ -23,16 +24,10 @@ namespace Production.Scripts.Events {
         public GameObjectReference PlayerBGameObject;
         public GameObjectReference PlayerCGameObject;
         public GameObjectReference PlayerDGameObject;
+        public FloatReference LevelScrollingSpeed;
         public BoolReference IsLevelScrolling;
         public BoolReference SpawnActive;
-        
-        [Header("SO Events")]
-        public VoidEvent OnStartGameFinished;
-        public VoidEvent OnEndGameFinished;
-        public VoidEvent OnControlInversionFinished;
-        public VoidEvent OnWindIsFinished;
-        public VoidEvent OnLightOffIsFinished;
-        
+
         private float _currentTimer;
         private float _endTimer;
         private Action _endTimeAction;
@@ -40,7 +35,8 @@ namespace Production.Scripts.Events {
 
         private float _deathLimitSmoothFactor;
         private Vector3 _deathLimitTargetPosition;
-
+        private float _levelScrollingSpeed;
+        
         private void Update() {
             _currentTimer += Time.deltaTime;
             _updateAction?.Invoke();
@@ -53,7 +49,6 @@ namespace Production.Scripts.Events {
         public void LaunchStartGame(int time) {
             LaunchEvent(time, delegate {
                 IsLevelScrolling.Value = true;
-                OnStartGameFinished.Raise();
             });
             DeathLimitAnimator.SetTrigger("StartGame");
             DeathLimitAnimator.speed = (float) 1 / time;
@@ -66,7 +61,6 @@ namespace Production.Scripts.Events {
                 PlayerBGameObject.Value.SetActive(false);
                 PlayerCGameObject.Value.SetActive(false);
                 PlayerDGameObject.Value.SetActive(false);
-                OnEndGameFinished.Raise();
             });
             SpawnActive.Value = false;
             DeathLimitAnimator.SetTrigger("EndGame");
@@ -77,14 +71,13 @@ namespace Production.Scripts.Events {
         public void LaunchControlInversion(int time) {
             LaunchEvent(time, delegate {
                 PlayerMouvement.Value = 1;
-                OnControlInversionFinished.Raise();
             });
             PlayerMouvement.Value = -1;
         }
 
         public void LaunchLightOff(int time) {
             LaunchEvent(time, delegate {
-                OnLightOffIsFinished.Raise();
+
             });
         }
 
@@ -95,16 +88,22 @@ namespace Production.Scripts.Events {
                 RightWindEffect.SetActive(false);
                 LeftWindEffect.SetActive(false);
                 _updateAction = null;
-                OnWindIsFinished.Raise();
             }, delegate {
                 PlayerAGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
                 PlayerBGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
                 PlayerCGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
                 PlayerDGameObject.Value.GetComponent<Rigidbody2D>().AddForce(windEffect * Time.deltaTime, ForceMode2D.Impulse);
-                Debug.Log("Wind : " + windEffect.x + " " + windEffect.y + " " + windEffect.z);
             });
             LeftWindEffect.SetActive(direction > 0);
             RightWindEffect.SetActive(direction < 0);
+        }
+
+        public void LaunchIncreaseSpeed(int time) {
+            _levelScrollingSpeed = LevelScrollingSpeed.Value;
+            LevelScrollingSpeed.Value = _levelScrollingSpeed * SpeedMultiplicator;
+            LaunchEvent(time, delegate {
+                LevelScrollingSpeed.Value = _levelScrollingSpeed;
+            });
         }
         
         private void LaunchEvent(float time, Action endTimeAction = null, Action updateAction = null) {

@@ -48,12 +48,6 @@ namespace Production.Scripts.Platforms {
         private void Start()
         {
             _use4Lines = true;
-            //Invoke("ScrollStartField", 3f);
-        }
-
-        private void ScrollStartField()
-        {
-            CurrentPlatforms.Add(StartFieldPrefab);
         }
 
         private void Update() {
