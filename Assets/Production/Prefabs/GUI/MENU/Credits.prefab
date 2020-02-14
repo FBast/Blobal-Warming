@@ -5128,6 +5128,9 @@ GameObject:
   - component: {fileID: 8850014867009195933}
   - component: {fileID: 1182474190340454444}
   - component: {fileID: 3598865529134115948}
+  - component: {fileID: 8986929051984913755}
+  - component: {fileID: 2881592286036184286}
+  - component: {fileID: 2199722564823868392}
   m_Layer: 5
   m_Name: Quitter
   m_TagString: Untagged
@@ -5269,6 +5272,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: 1
+  Controller: 1
+--- !u!114 &8986929051984913755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319189996894418999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7394abedc7b46ad82311a390f873908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 1
+  Controller: 2
+--- !u!114 &2881592286036184286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319189996894418999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7394abedc7b46ad82311a390f873908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 1
+  Controller: 3
+--- !u!114 &2199722564823868392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319189996894418999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7394abedc7b46ad82311a390f873908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 1
+  Controller: 4
 --- !u!1 &7776509416119840896
 GameObject:
   m_ObjectHideFlags: 0

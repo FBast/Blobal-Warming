@@ -8,9 +8,14 @@ namespace Production.Scripts.Components
     public class ButtonComponent : MonoBehaviour
     {
         public XboxButton Button;
+        public XboxController Controller;
         private void Update()
         {
-            if (XCI.GetButtonDown(Button, XboxController.Any))
+            OnXboxControllerClick(Controller);
+        }
+
+        void OnXboxControllerClick(XboxController controller) {
+            if (XCI.GetButtonDown(Button, controller))
             {
                 Debug.Log("Click A ");
                 this.GetComponent<Button>().onClick.Invoke();
