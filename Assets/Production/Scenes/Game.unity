@@ -888,11 +888,16 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3339378881340119045, guid: 83e847c7025c2384ebc6f86d19c46aa4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: be5feefbccc1d754fb401cb9a528a680, type: 2}
     - target: {fileID: 3529984294625714219, guid: 83e847c7025c2384ebc6f86d19c46aa4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 082e9fae440636e4fa38160ab32e0743, type: 2}
+      objectReference: {fileID: 2100000, guid: bf3ad560743b0a4438574f392a7dfc14, type: 2}
     - target: {fileID: 4585107676136959633, guid: 83e847c7025c2384ebc6f86d19c46aa4,
         type: 3}
       propertyPath: m_RootOrder
