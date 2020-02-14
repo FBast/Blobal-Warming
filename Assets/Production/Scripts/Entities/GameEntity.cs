@@ -2,6 +2,7 @@
 using System.Linq;
 using Production.Plugins.RyanScriptableObjects.SOEvents.IntEvents;
 using Production.Plugins.RyanScriptableObjects.SOEvents.StringEvents;
+using Production.Plugins.RyanScriptableObjects.SOEvents.VoidEvents;
 using Production.Plugins.RyanScriptableObjects.SOReferences.BoolReference;
 using Production.Plugins.RyanScriptableObjects.SOReferences.FloatReference;
 using Production.Plugins.RyanScriptableObjects.SOReferences.GameObjectReference;
@@ -30,6 +31,7 @@ namespace Production.Scripts.Entities {
 
         [Header("Score Management")] 
         public IntEvent DisplayScore;
+        public VoidEvent HideOverlay;
         public List<FloatReference> ScoreReference = new List<FloatReference>();
         public ScoreData _scoreData;
     
@@ -111,8 +113,7 @@ namespace Production.Scripts.Entities {
                     InitializeScoreList();
                     CurrentTime.Value = StartingTime;
                     DisplayScore.Raise(PlayersEntities.Count);
-                    OnLoadScene.Raise(MenuScene);
-                    OnUnloadScene.Raise(GameScene);
+                    HideOverlay.Raise();
                 } 
             }
         }
