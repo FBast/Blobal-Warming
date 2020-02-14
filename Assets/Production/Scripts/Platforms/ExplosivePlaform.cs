@@ -6,7 +6,7 @@ namespace Production.Scripts.Platforms
     {
         public GameObject ExplosionParticules;
         public GameObject ExplosionRangeCollision;
-        public AudioSource ExplosionSound;
+        public SoundComponent sc;
 
         
         public float timerAfterHit;
@@ -17,6 +17,7 @@ namespace Production.Scripts.Platforms
         private void Start()
         {
             ExplosionRangeCollision.SetActive(false);
+            sc = GetComponent<SoundComponent>();
         }
         
         private void OnCollisionEnter2D(Collision2D other)
@@ -33,7 +34,8 @@ namespace Production.Scripts.Platforms
                 IsExploding = true;
                 ExplosionRangeCollision.SetActive(true);
                 Instantiate(ExplosionParticules, transform);
-                ExplosionSound.PlayOneShot(ExplosionSound.clip);
+                sc.Play("ExplosionSound");
+                
             }
 
             if (IsExploding) timerExplosionTime -= Time.deltaTime;
