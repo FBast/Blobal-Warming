@@ -1,6 +1,7 @@
 using Production.Plugins.RyanScriptableObjects.SOEvents.GameObjectEvents;
 using Production.Plugins.RyanScriptableObjects.SOReferences.BoolReference;
 using UnityEngine;
+using XInputDotNetPure;
 
 namespace Production.Scripts.Components
 {
@@ -8,6 +9,7 @@ namespace Production.Scripts.Components
     public class HealthComponent : MonoBehaviour
     {
         public GameObjectEvent playerDead;
+        public GameObject PlayerDeathPrefab;
         private IHealth _health;
         public float CurrentHP;
         private ScoreComponent scoreComponent;
@@ -47,10 +49,11 @@ namespace Production.Scripts.Components
             if (ShieldActive.Value == false)
             {
                scoreComponent.incrementTimer=0f;
-                CurrentHP -= (float)damage;
+                CurrentHP -= damage;
                 sound.Play("HurtFx");
                 if(CurrentHP <= 0){
-                    playerDead.Raise(this.gameObject);
+                    Instantiate(PlayerDeathPrefab, transform.position, Quaternion.identity);
+                    playerDead.Raise(gameObject);
                     CurrentHP = _health.MaxHP;
                 }
             }
