@@ -61,14 +61,13 @@ namespace Production.Scripts.Entities {
         private void InitializeScoreList()
         {
             for(int i =0; i < PlayersEntities.Count; i++){ //ACTIVE PLAYERS ONLY
-                if (ScoreReference[i].Value > 0)
-                {
-                    ScoreDataEntry newEntry = new ScoreDataEntry();
+                ScoreDataEntry newEntry = new ScoreDataEntry();
                     newEntry.PlayerName = PlayersEntities[i].Name.Value;
+                    Debug.Log("Save score : " + PlayersEntities[i].name);
                     newEntry.Score = PlayersEntities[i].playerScore.Value;
                     newEntry.PlayerID = PlayersEntities[i].GetComponent<BonusHandlerComponent>().PlayerID;
                     _scoreData.ScoreList.Add(newEntry);
-                }
+                
             }
             _scoreData.PlayerNumberInLastGame = PlayersEntities.Count;
             _scoreData.Display();

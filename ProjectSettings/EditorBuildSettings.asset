@@ -14,10 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Production/Scenes/Game.unity
     guid: 612d4ffdbe790ef4aa741b774def9acd
-  - enabled: 1
-    path: Assets/Collaborators Folder/Aaron/Scene/menu scene.unity
-    guid: de0eaf63d8552b24bb8a96bb8cc50a6d
-  - enabled: 1
-    path: Assets/Collaborators Folder/Aaron/Scene/Credit panel.unity
-    guid: bcba515f1d11a0544ab4ea8a58bce62b
   m_configObjects: {}
