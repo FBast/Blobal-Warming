@@ -61,24 +61,24 @@ namespace Production.Scripts.UI {
                 _nameText.color = Color.white;
                 if (LastPlayers.Count > 0)
                 {
-                    if (LastPlayers.Exists(item => item.PlayerName == BestScores[i].PlayerName))
+                    if (LastPlayers.Exists(item => item.PlayerID == BestScores[i].PlayerID))
                     {
-                        if (BestScores[i].PlayerID == 0)
+                        if (BestScores[i].PlayerNumber == 0)
                         {
                             _nameText.color = Color.blue;
                             _scoreText.color = Color.blue;
                         }
-                        if (BestScores[i].PlayerID == 1)
+                        if (BestScores[i].PlayerNumber == 1)
                         {
                             _nameText.color = Color.green;
                             _scoreText.color = Color.green;
                         }
-                        if (BestScores[i].PlayerID == 2)
+                        if (BestScores[i].PlayerNumber == 2)
                         {
                             _nameText.color = Color.red;
                             _scoreText.color = Color.red;
                         }
-                        if (BestScores[i].PlayerID == 3)
+                        if (BestScores[i].PlayerNumber == 3)
                         {
                             _nameText.color = Color.yellow;
                             _scoreText.color = Color.yellow;
@@ -99,7 +99,7 @@ namespace Production.Scripts.UI {
             for (int i = 0; i < NumberOfPlayer; i++)
             {
                 LastPlayers.Add(ScoreData.ScoreList[index]);
-                int PanelID = ScoreData.ScoreList[index].PlayerID;
+                int PanelID = ScoreData.ScoreList[index].PlayerNumber;
                 int Score = Mathf.RoundToInt(ScoreData.ScoreList[index].Score);
                 string Name = ScoreData.ScoreList[index].PlayerName;
                 Debug.Log(PanelID + Score + Name);

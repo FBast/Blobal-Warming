@@ -24,10 +24,17 @@ namespace Production.Scripts.Data
     }
 
     [Serializable]
-    public struct ScoreDataEntry
-    {
+    public struct ScoreDataEntry {
+
+        public string PlayerID => PlayerNumber + "_" + Score;
         public string PlayerName;
         public float Score;
-        public int PlayerID;
+        public int PlayerNumber;
+
+        public ScoreDataEntry(string playerName, float score, int playerNumber) : this() {
+            PlayerName = playerName;
+            Score = score;
+            PlayerNumber = playerNumber;
+        }
     }
 }
