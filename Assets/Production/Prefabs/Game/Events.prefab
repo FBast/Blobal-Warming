@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RandomizedEvents:
   - {fileID: 11400000, guid: 2a7840e494793384cade16c8476f1986, type: 2}
+  - {fileID: 11400000, guid: cd3bd73f9758e1243ac93cd1cca4de5a, type: 2}
   OnStartGame: {fileID: 11400000, guid: 2e9222f469eb9ce4ba6f5b16242974a2, type: 2}
   OnEndGame: {fileID: 11400000, guid: 55d3eda2e80e54f4ebe81ff54d23088d, type: 2}
   HasGameStarted:

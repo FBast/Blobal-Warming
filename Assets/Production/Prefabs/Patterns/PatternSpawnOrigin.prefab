@@ -52,20 +52,43 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 180
     Variable: {fileID: 11400000, guid: 2aadd9651b5705d478ecddbe43a02933, type: 2}
-  DifficultyIndiceMax: 4
+  DifficultyIndiceMax: 3
   DifficultyIndiceMin: 1
   DiffcultIndiceMultiplicator: 1
   DifficultyIndice: 0
-  PlatformPrefabs:
-  - {fileID: 6930691156639378056, guid: 118c92e36f325e942b0aeff34381d894, type: 3}
-  - {fileID: 8601394250474481044, guid: b1cc0a010607aa049817241515916a83, type: 3}
-  - {fileID: 8601394250474481044, guid: 29962b0158067a24b889bfb4e085844f, type: 3}
-  - {fileID: 829626895605407499, guid: 3ac2bc27a32d6034d95f1fea96f1209c, type: 3}
-  - {fileID: 8601394250474481044, guid: bc677b1602637084d8c0d0bd15e89bc1, type: 3}
-  - {fileID: 8601394250474481044, guid: 72ff23ed51a1afa4dbcd4444c6fd7d02, type: 3}
-  - {fileID: 7759904624339635470, guid: 08963f114e96272429466c0e9b6f9f38, type: 3}
-  - {fileID: 1868635435161972247, guid: 2d40494ed3354b146933b1de6654479c, type: 3}
-  PlatformDifficulty: 0100000003000000030000000200000002000000020000000300000003000000
+  PlateformDifficulties:
+  - PlateformPrefab: {fileID: 6930691156639378056, guid: 118c92e36f325e942b0aeff34381d894,
+      type: 3}
+    DifficultyIndice: 1
+    Redundancy: 3
+  - PlateformPrefab: {fileID: 7759904624339635470, guid: 08963f114e96272429466c0e9b6f9f38,
+      type: 3}
+    DifficultyIndice: 2
+    Redundancy: 2
+  - PlateformPrefab: {fileID: 829626895605407499, guid: 3ac2bc27a32d6034d95f1fea96f1209c,
+      type: 3}
+    DifficultyIndice: 2
+    Redundancy: 1
+  - PlateformPrefab: {fileID: 8601394250474481044, guid: bc677b1602637084d8c0d0bd15e89bc1,
+      type: 3}
+    DifficultyIndice: 2
+    Redundancy: 1
+  - PlateformPrefab: {fileID: 8601394250474481044, guid: 29962b0158067a24b889bfb4e085844f,
+      type: 3}
+    DifficultyIndice: 2
+    Redundancy: 1
+  - PlateformPrefab: {fileID: 8601394250474481044, guid: b1cc0a010607aa049817241515916a83,
+      type: 3}
+    DifficultyIndice: 3
+    Redundancy: 2
+  - PlateformPrefab: {fileID: 1868635435161972247, guid: 2d40494ed3354b146933b1de6654479c,
+      type: 3}
+    DifficultyIndice: 3
+    Redundancy: 1
+  - PlateformPrefab: {fileID: 8601394250474481044, guid: 72ff23ed51a1afa4dbcd4444c6fd7d02,
+      type: 3}
+    DifficultyIndice: 3
+    Redundancy: 1
   PlatformThatCanSpawn: []
   PlatformBirthPlace: []
 --- !u!61 &-1139339010777916769
