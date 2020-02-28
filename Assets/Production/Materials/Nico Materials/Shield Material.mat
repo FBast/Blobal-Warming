@@ -12,7 +12,7 @@ Material:
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -21,6 +21,8 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
+    - Vector1_2B268C5B: 0.1
+    - Vector1_A6B9863C: 0.2
     - Vector1_E74A33D5: 0.6513158
     - _Fill: 1
     m_Colors:
