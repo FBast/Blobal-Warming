@@ -1,8 +1,6 @@
-﻿using System;
-using Production.Plugins.RyanScriptableObjects.SOReferences.BoolReference;
+﻿using Production.Plugins.RyanScriptableObjects.SOReferences.BoolReference;
 using Production.Plugins.RyanScriptableObjects.SOReferences.FloatReference;
 using UnityEngine;
-using UnityEngine.Experimental.PlayerLoop;
 
 public class TrunkSlider : MonoBehaviour {
 
