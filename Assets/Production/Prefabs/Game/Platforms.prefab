@@ -57,6 +57,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -236,7 +237,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 7e5c9e4424280bf4c803ede1e88f632e, type: 2}
-  SpawnRateMultiplicator: 0.06
+  SpawnRateMultiplicator: 0.05
   PlateformMinNumber: 2
   PlateformMaxNumber: 4
   PatternPrefabs4PF4L:

@@ -105,6 +105,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 1848d9ce331ca8547babbf2ac8ea0e5f, type: 2}
+  LevelScrollingSpeedOnStart: 0.02
   DisplayScore: {fileID: 11400000, guid: fea4cc4ec4ae27841a7b823e1dec309e, type: 2}
   HideOverlay: {fileID: 11400000, guid: 79219ee83503cb347a88f2840cc0e129, type: 2}
   ScoreReference:
