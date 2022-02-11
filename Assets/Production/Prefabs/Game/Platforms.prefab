@@ -239,7 +239,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 7e5c9e4424280bf4c803ede1e88f632e, type: 2}
-  SpawnRateMultiplicator: 0.015
+  SpawnRateMultiplicator: 0.05
   PlateformMinNumber: 2
   PlateformMaxNumber: 4
   PatternPrefabs4PF4L:

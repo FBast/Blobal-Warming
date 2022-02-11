@@ -1721,11 +1721,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 232766147}
     m_Modifications:
-    - target: {fileID: 1261876354577507251, guid: 62cf5b0abf1442645b8915543f3b8808,
-        type: 3}
-      propertyPath: LevelScrollingSpeedOnStart
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 3886062435705194136, guid: 62cf5b0abf1442645b8915543f3b8808,
         type: 3}
       propertyPath: m_RootOrder
