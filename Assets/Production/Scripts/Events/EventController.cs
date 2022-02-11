@@ -61,10 +61,10 @@ namespace Production.Scripts.Events {
         
         public void LaunchEndGame(int time) {
             LaunchEvent(time, delegate {
-                PlayerAGameObject.Value.SetActive(false);
-                PlayerBGameObject.Value.SetActive(false);
-                PlayerCGameObject.Value.SetActive(false);
-                PlayerDGameObject.Value.SetActive(false);
+                if (PlayerAGameObject.Value != null) PlayerAGameObject.Value.SetActive(false);
+                if (PlayerBGameObject.Value != null) PlayerBGameObject.Value.SetActive(false);
+                if (PlayerCGameObject.Value != null) PlayerCGameObject.Value.SetActive(false);
+                if (PlayerDGameObject.Value != null) PlayerDGameObject.Value.SetActive(false);
             });
             SpawnActive.Value = false;
             DeathLimitAnimator.SetTrigger("EndGame");

@@ -1,51 +1,43 @@
 ﻿using Production.Plugins.RyanScriptableObjects.SOEvents.VoidEvents;
 using Production.Plugins.RyanScriptableObjects.SOReferences.BoolReference;
-using Production.Plugins.RyanScriptableObjects.SOReferences.GameObjectListReference;
+using Production.Scripts.Components;
 using Production.Scripts.Utils;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Production.Scripts.Entities
-{
-    public class SpawnEntity : MonoBehaviour
-    {
-        [SerializeField]Transform SpawnPoint;
-        [SerializeField]GameObject player;
+namespace Production.Scripts.Entities {
+    public class SpawnEntity : MonoBehaviour {
+        public Transform SpawnPoint;
+        [FormerlySerializedAs("player")] public GameObject PlayerGameObject;
         public BoolReference OnPlayerActive;
         public BoolReference SpawnActive;
         public VoidEvent PlayerSpawn;
-        
-        void Awake()
-        {
-            player.GetComponent<PlayerEntity>().Name.Value = NameGenerator.GenerateName();
-                
+
+        private void Awake() {
+            PlayerGameObject.GetComponent<PlayerEntity>().Name.Value = NameGenerator.GenerateName();
         }
-        public void FirstSpawn()
-        {
-            if (SpawnActive.Value)
-            {
-                player.SetActive(true);
+        
+        public void FirstSpawn() {
+            if (SpawnActive.Value) {
+                PlayerGameObject.SetActive(true);
                 PlayerSpawn.Raise();
                 OnPlayerActive.Value = true;
-                player.GetComponent<ArrowComponent>().DisplayOnRespawn();
-                player.transform.position = SpawnPoint.position;
+                PlayerGameObject.GetComponent<ArrowComponent>().DisplayOnRespawn();
+                PlayerGameObject.transform.position = SpawnPoint.position;
             }
-            else
-            {
-                Debug.Log("Spawn Unactive");
+            else {
+                Debug.Log("Spawn inactive");
             }
         }
 
-        
-        public void Respawn(){
-            if (SpawnActive.Value)
-            {
-                player.GetComponent<ArrowComponent>().DisplayOnRespawn();
-                player.transform.position = SpawnPoint.position;
+        public void Respawn() {
+            if (SpawnActive.Value) {
+                PlayerGameObject.GetComponent<ArrowComponent>().DisplayOnRespawn();
+                PlayerGameObject.transform.position = SpawnPoint.position;
             }
-            else
-            {
-                Debug.Log("Respawn Unactive");
-                player.SetActive(false);
+            else {
+                Debug.Log("Respawn inactive");
+                PlayerGameObject.SetActive(false);
             }
         }
 

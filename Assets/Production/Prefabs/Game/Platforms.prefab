@@ -58,6 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -82,6 +83,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &1231847193341855127
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -237,7 +239,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 7e5c9e4424280bf4c803ede1e88f632e, type: 2}
-  SpawnRateMultiplicator: 0.05
+  SpawnRateMultiplicator: 0.015
   PlateformMinNumber: 2
   PlateformMaxNumber: 4
   PatternPrefabs4PF4L:
@@ -279,6 +281,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3598506305036473686, guid: f9aedbce180115d46a428ff95cf7648a,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598506305036473686, guid: f9aedbce180115d46a428ff95cf7648a,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -286,6 +293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598506305036473686, guid: f9aedbce180115d46a428ff95cf7648a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3598506305036473686, guid: f9aedbce180115d46a428ff95cf7648a,
         type: 3}
@@ -301,16 +313,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3598506305036473686, guid: f9aedbce180115d46a428ff95cf7648a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3598506305036473686, guid: f9aedbce180115d46a428ff95cf7648a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3598506305036473686, guid: f9aedbce180115d46a428ff95cf7648a,
         type: 3}

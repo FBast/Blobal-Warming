@@ -5,7 +5,6 @@ using XInputDotNetPure;
 
 namespace Production.Scripts.Components
 {
-
     public class HealthComponent : MonoBehaviour
     {
         public GameObjectEvent playerDead;

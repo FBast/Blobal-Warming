@@ -267,6 +267,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6787164345247438145}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Land
         m_Mode: 1
         m_Arguments:
@@ -360,6 +361,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6787164345247438145}
+        m_TargetAssemblyTypeName: 
         m_MethodName: ResetBoolOnDead
         m_Mode: 1
         m_Arguments:
@@ -406,6 +408,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1208775513628984761}
+        m_TargetAssemblyTypeName: 
         m_MethodName: DesactiveAllOnDeath
         m_Mode: 1
         m_Arguments:
@@ -476,8 +479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f78908e89bf9b4bb552c39f875c354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arrow: {fileID: 5669420726450617582}
-  arrowY: 8
+  Arrow: {fileID: 106238679072890131}
+  ArrowY: 8
 --- !u!95 &4615955620424001856
 Animator:
   serializedVersion: 3
@@ -581,7 +584,6 @@ MonoBehaviour:
   RightStickAxisInput: {x: 0, y: 0, z: 0}
   LeftStickAxisInput: {x: 0, y: 0, z: 0}
   Player: {fileID: 2494462091154683604}
-  _spawnEntity: {fileID: 0}
 --- !u!114 &3923901574787890875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,7 +597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 0}
-  player: {fileID: 2494462091154683604}
+  PlayerGameObject: {fileID: 2494462091154683604}
   OnPlayerActive:
     UseConstant: 0
     ConstantValue: 0
@@ -622,6 +624,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3923901574787890875}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Respawn
         m_Mode: 1
         m_Arguments:
@@ -677,6 +680,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -782,6 +787,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8553236419606688638, guid: 118650db1d37cdd4886716667a2cbfd3,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553236419606688638, guid: 118650db1d37cdd4886716667a2cbfd3,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -797,6 +807,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8553236419606688638, guid: 118650db1d37cdd4886716667a2cbfd3,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553236419606688638, guid: 118650db1d37cdd4886716667a2cbfd3,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -809,16 +824,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8553236419606688638, guid: 118650db1d37cdd4886716667a2cbfd3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8553236419606688638, guid: 118650db1d37cdd4886716667a2cbfd3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8553236419606688638, guid: 118650db1d37cdd4886716667a2cbfd3,
         type: 3}

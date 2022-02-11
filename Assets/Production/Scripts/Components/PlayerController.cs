@@ -327,29 +327,16 @@ namespace Production.Scripts.Components
 			}
 
 		}
-
 		
-
-		public void Land()
-		{
+		public void Land() {
 		    wall = null;
 		    lastWall = null;
 			dashTime = 0;
 			canDoubleJump = true;
 			canDash = true;
 			m_AirControl = true;
-			gameObject.GetComponent<ArrowComponent>().UnactiveArrow();
+			gameObject.GetComponent<ArrowComponent>().InactiveArrow();
 		}
-//		public void Flip()
-//		{
-//			// Switch the way the player is labelled as facing.
-//			m_FacingRight = !m_FacingRight;
-//
-//			// Multiply the player's x local scale by -1.
-//			Vector3 theScale = transform.localScale;
-//			theScale.x *= -1;
-//			transform.localScale = theScale;
-//		}
 
 		public void ResetBoolOnDead()
 		{

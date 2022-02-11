@@ -11,9 +11,11 @@ using Production.Scripts.Components;
 using Production.Scripts.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace Production.Scripts.Entities {
     public class GameEntity : MonoBehaviour {
+    
         [Header("Player Management")] 
         public List<GameObjectReference> PlayersReference = new List<GameObjectReference>();
         public List<PlayerEntity> PlayersEntities = new List<PlayerEntity>();
@@ -21,9 +23,9 @@ namespace Production.Scripts.Entities {
         public BoolReference SpawnActive;
         
         // Initialisation des Instances de Scriptables Objects pour les joueurs au lancement du jeu.
-        [Header("Values Initialisation")]
-        public List<FloatReference> MovementSpeed = new List<FloatReference>();
-        public List<StringReference> Names = new List<StringReference>();
+        [Header("Values Initialisation")] 
+        [FormerlySerializedAs("MovementSpeed")] public List<FloatReference> MovementSpeeds = new List<FloatReference>();
+        [FormerlySerializedAs("Names")] public List<StringReference> PlayerNames = new List<StringReference>();
         public FloatReference MovementSpeedBaseValue;
         public FloatReference ControllerDirection;
         public BoolReference IsLevelScrolling;
@@ -47,6 +49,7 @@ namespace Production.Scripts.Entities {
         public StringEvent OnUnloadScene;
         public string MenuScene;
         public string GameScene;
+        
         private void Awake() {
             InitializeEntitiesList();
             InitializeValues();
@@ -55,54 +58,50 @@ namespace Production.Scripts.Entities {
             Endtime.Value = StartingTime;
             HasGameStarted.Value = false;
         }
-        private void Update()
-        {
+        
+        private void Update() {
             Timer();
         }
-        private void InitializeScoreList()
-        {
-            for(int i =0; i < PlayersEntities.Count; i++){ //ACTIVE PLAYERS ONLY
-                ScoreDataEntry newEntry = new ScoreDataEntry(PlayersEntities[i].Name.Value, 
-                    PlayersEntities[i].playerScore.Value, 
-                    PlayersEntities[i].GetComponent<BonusHandlerComponent>().PlayerID);
+        
+        private void InitializeScoreList() {
+            foreach (PlayerEntity playerEntity in PlayersEntities) {
+                //ACTIVE PLAYERS ONLY
+                ScoreDataEntry newEntry = new ScoreDataEntry(playerEntity.Name.Value, 
+                    playerEntity.playerScore.Value, 
+                    playerEntity.GetComponent<BonusHandlerComponent>().PlayerID);
                 _scoreData.ScoreList.Add(newEntry);
             }
             _scoreData.PlayerNumberInLastGame = PlayersEntities.Count;
             _scoreData.Display();
         }
-        public void InitializeEntitiesList()
-        {
+        
+        public void InitializeEntitiesList() {
             PlayerEntity[] players = FindObjectsOfType<PlayerEntity>();
             PlayersEntities.Clear();
             PlayersEntities = players.ToList();
-        
         }
-        private void InitializeValues()
-        {
+        
+        private void InitializeValues() {
             CurrentTime.Value = StartingTime;
             Endtime.Value = StartingTime;
             SpawnActive.Value = true;
             HasGameStarted.Value = false;
             LevelScrollingSpeed.Value = LevelScrollingSpeedOnStart;
             IsLevelScrolling.Value = false;
-            foreach (var mS in MovementSpeed)
-            {
-                mS.Value = MovementSpeedBaseValue.Value;
+            foreach (FloatReference movementSpeed in MovementSpeeds) {
+                movementSpeed.Value = MovementSpeedBaseValue.Value;
             }
             ControllerDirection.Value = 1;
-            foreach (var name in Names)
-            {
-                name.Value = "";
+            foreach (StringReference playerName in PlayerNames) {
+                playerName.Value = "";
             }
-            foreach (var player in ActivePlayers)
-            {
+            foreach (var player in ActivePlayers) {
                 player.Value = false;
             }
         }
-        private void Timer()
-        {
-            if (HasGameStarted.Value)
-            {
+        
+        private void Timer() {
+            if (HasGameStarted.Value) {
                 CurrentTime.Value -= Time.deltaTime;
                 if (CurrentTime.Value <= 0) {
                     HasGameStarted.Value = false;
@@ -114,12 +113,12 @@ namespace Production.Scripts.Entities {
                 } 
             }
         }
-        private void ResetScores()
-        {
-            foreach (var score in ScoreReference)
-            {
+        
+        private void ResetScores() {
+            foreach (var score in ScoreReference) {
                 score.Value = 0;
             }
         }
+        
     }
 }
